@@ -6,7 +6,7 @@ class TransaksiRegistrasiController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -37,7 +37,6 @@ class TransaksiRegistrasiController extends Controller
 				'actions'=>array('create','captcha'), 
 				'users'=>array('*'),
 			),
-
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
@@ -46,7 +45,6 @@ class TransaksiRegistrasiController extends Controller
 			 	'actions'=>array('update','view'), 
 			 	'users'=>array('@'), 
 			 ),
-
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
@@ -79,18 +77,51 @@ class TransaksiRegistrasiController extends Controller
 	public function actionCreate()
 	{
 		$model=new TransaksiRegistrasi;
+		$model_user=new User;
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['TransaksiRegistrasi']))
-		{
+		// $this->performAjaxValidation($model,$model_user);
+		
+		if(isset($_POST['TransaksiRegistrasi'])){
+		// 	if($model->validate() && $model_user->validate()){
+		// 	echo "oke";
+		// }else{
+		// 	echo "ga oke";
+		// }
+		// die();
 			$model->attributes=$_POST['TransaksiRegistrasi'];
-			if($model->save())
+			$model_user->attributes=$_POST['User'];
+			$cek= $model->validate();
+			$cek= $model_user->validate() && $cek;
+			if($cek){
+				// if($model->save()){
+				$number='';
+				for ($i=0; $i < 16 ; $i++) { 
+					$number.=rand(0,9);
+				}
+				$model->ID_FANBASE = 1;
+				$model->NO_SAKTI = $number;
+				$model->VAD = '-';
+				$model->STATUS_REKONSILIASI = 'N';
+				$model->STATUS_RELEASE = 'N';
+				$tgl = explode('/',$_POST['TransaksiRegistrasi']['TANGGAL']);
+				$model->TANGGAL=$tgl[2].'-'.$tgl[1].'-'.$tgl[0];
+				$model->save(false);
+
+				$model_user->PASSWORD = md5($_POST['User']['PASSWORD']);
+				$model_user->ID_FANBASE = $model->ID_FANBASE;
+				$model_user->ID_REGISTRASI= $model->ID_REGISTRASI;
+				$model_user->ID_JENIS=3;
+				$model_user->NOMER_SAKTI='-';
+				$model_user->VAS='-';
+				$model_user->STATUS='N';
+				$model_user->save(false);
+
 				$this->redirect(array('view','id'=>$model->ID_REGISTRASI));
+			}
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$model,'model_user'=>$model_user,
 		));
 	}
 
@@ -177,11 +208,12 @@ class TransaksiRegistrasiController extends Controller
 	 * Performs the AJAX validation.
 	 * @param TransaksiRegistrasi $model the model to be validated
 	 */
-	protected function performAjaxValidation($model)
+	protected function performAjaxValidation($model,$model_user)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='transaksi-registrasi-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='registrasi-form')
 		{
 			echo CActiveForm::validate($model);
+			echo CActiveForm::validate($model_user);
 			Yii::app()->end();
 		}
 	}

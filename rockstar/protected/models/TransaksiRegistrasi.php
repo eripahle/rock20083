@@ -46,7 +46,8 @@ class TransaksiRegistrasi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('verifyCode, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH', 'required'),
+			// array('verifyCode, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH,CORP', 'required','message'=>'Data {attribute} Harus Diisi'),
+			array('NAMA_LENGKAP', 'required'),
 			array('NAMA_LENGKAP', 'length', 'max'=>50),
 			array('verifyCode', 'captcha', 'allowEmpty'=>!extension_loaded('gd')),
 			array('TEMPAT, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, CORP', 'length', 'max'=>30),
@@ -55,7 +56,7 @@ class TransaksiRegistrasi extends CActiveRecord
 			array('NO_TELP', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_REGISTRASI, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, NO_SAKTI, CORP, VID, STATUS_REKONSILIASI, STATUS_RELEASE', 'safe', 'on'=>'search'),
+			array('ID_REGISTRASI, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, NO_SAKTI, CORP, VAD, STATUS_REKONSILIASI, STATUS_RELEASE', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -92,7 +93,7 @@ class TransaksiRegistrasi extends CActiveRecord
 			'NAMA_AYAH' => 'Nama Ayah',
 			'NO_SAKTI' => 'No Sakti',
 			'CORP' => 'Corp',
-			'VID' => 'Vid',
+			'VAD' => 'Vad',
 			'STATUS_REKONSILIASI' => 'Status Rekonsiliasi',
 			'STATUS_RELEASE' => 'Status Release',
 		);
@@ -132,7 +133,7 @@ class TransaksiRegistrasi extends CActiveRecord
 		$criteria->compare('NAMA_AYAH',$this->NAMA_AYAH,true);
 		$criteria->compare('NO_SAKTI',$this->NO_SAKTI,true);
 		$criteria->compare('CORP',$this->CORP,true);
-		$criteria->compare('VID',$this->VID,true);
+		$criteria->compare('VAD',$this->VAD,true);
 		$criteria->compare('STATUS_REKONSILIASI',$this->STATUS_REKONSILIASI,true);
 		$criteria->compare('STATUS_RELEASE',$this->STATUS_RELEASE,true);
 

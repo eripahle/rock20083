@@ -19,6 +19,8 @@
  */
 class User extends CActiveRecord
 {
+
+	public $password2;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -35,12 +37,15 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_USER, USERNAME, PASSWORD, NOMER_SAKTI, VAS, STATUS', 'required'),
-			array('ID_USER, ID_REGISTRASI, ID_JENIS', 'numerical', 'integerOnly'=>true),
-			array('USERNAME', 'length', 'max'=>30),
-			array('PASSWORD', 'length', 'max'=>50),
-			array('NOMER_SAKTI, VAS', 'length', 'max'=>16),
-			array('STATUS', 'length', 'max'=>1),
+
+			array('USERNAME, PASSWORD,password2', 'required','message'=>'Data {attribute} Harus Diisi'),
+			array('USERNAME', 'length', 'max'=>20),
+			array('PASSWORD', 'length', 'max'=>30),
+			array('USERNAME','unique','message'=>'Username "<b>{value}</b>" Sudah Digunakan'),
+			// array('PASSWORD, password2', 'required', 'on' => 'create'),
+            // array('PASSWORD, password2', 'length', 'min' => 6, 'max' => 30, 'on' => array('create', 'update')),
+            array('password2', 'compare', 'compareAttribute' => 'PASSWORD','message'=>'Password Harus Sama'),
+            // array('PASSWORD, password2', 'length', 'min' => 8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('ID_USER, ID_REGISTRASI, ID_JENIS, USERNAME, PASSWORD, NOMER_SAKTI, VAS, STATUS', 'safe', 'on'=>'search'),
@@ -58,6 +63,20 @@ class User extends CActiveRecord
 			'iDREGISTRASI' => array(self::BELONGS_TO, 'TransaksiRegistrasi', 'ID_REGISTRASI'),
 			'iDJENIS' => array(self::BELONGS_TO, 'JenisUser', 'ID_JENIS'),
 		);
+	}
+
+	public function validatePassword($password) { 
+		return 
+		$this->hashPassword($password,$this->saltPassword)===$this->password; 
+	} 
+
+	public function hashPassword($password,$salt) { 
+		return 
+		md5($salt.$password); 
+	} 
+
+	public function generateSalt() { 
+		return uniqid('',true); 
 	}
 
 	/**
