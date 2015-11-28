@@ -104,7 +104,7 @@ class TransaksiRegistrasiController extends Controller
 				$model->STATUS_REKONSILIASI = 'N';
 				$model->STATUS_RELEASE = 'N';
 				$tgl = explode('/',$_POST['TransaksiRegistrasi']['TANGGAL']);
-				$model->TANGGAL=$tgl[2].'-'.$tgl[1].'-'.$tgl[0];
+				$model->TANGGAL=$tgl[2].'-'.$tgl[0].'-'.$tgl[1];
 				$model->save(false);
 
 				$model_user->PASSWORD = md5($_POST['User']['PASSWORD']);

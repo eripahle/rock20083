@@ -45,6 +45,28 @@ class TransaksiRegistrasi extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
+		 // if( Yii::app()->user->getState('role') =="1")
+   //      {
+   //           $arr =array('index','calendar','contact','staff','service');   // give all access to admin
+   //      }else if( Yii::app()->user->getState('role') =="2")
+   //              {
+   //                      $arr =array('index','staff','staffcalendar','update');   // give all access to staff
+   //              }
+   //              else
+   //              {
+   //        $arr = array('');          //  no access to other user
+   //      }
+                
+   //      return array(                   
+   //              array('allow', // allow authenticated user to perform 'create' and 'update' actions
+   //                              'actions'=>$arr,
+   //                              'users'=>array('@'),
+   //                      ),
+                                                
+   //                      array('deny',  // deny all users
+   //                              'users'=>array('*'),
+   //                      ),
+   //              );
 		return array(
 			// array('verifyCode, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH,CORP', 'required','message'=>'Data {attribute} Harus Diisi'),
 			array('NAMA_LENGKAP', 'required'),

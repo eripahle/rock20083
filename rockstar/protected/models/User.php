@@ -65,15 +65,16 @@ class User extends CActiveRecord
 		);
 	}
 
-	public function validatePassword($password) { 
-		return 
-		$this->hashPassword($password,$this->saltPassword)===$this->password; 
-	} 
-
-	public function hashPassword($password,$salt) { 
-		return 
-		md5($salt.$password); 
-	} 
+	 public function validatePassword($password)
+    {
+    	$hash= CPasswordHelper::hashPassword($this->PASSWORD);
+        return CPasswordHelper::verifyPassword(md5($password),$hash);
+    }
+ 
+    public function hashPassword($password)
+    {
+        return CPasswordHelper::hashPassword($password);
+    }
 
 	public function generateSalt() { 
 		return uniqid('',true); 
