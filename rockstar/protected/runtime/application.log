@@ -2543,3 +2543,21 @@ Stack trace:
 REQUEST_URI=/_rockstar/rockstar/index.php/gallery/index
 HTTP_REFERER=http://localhost/_rockstar/rockstar/index.php/gallery/index
 ---
+2015/11/28 05:50:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery/index".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gallery/index')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar/index.php/gallery/index
+HTTP_REFERER=http://localhost/_rockstar/rockstar/index.php
+---
+2015/11/28 05:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery/index".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gallery/index')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar/index.php/gallery/index
+HTTP_REFERER=http://localhost/_rockstar/rockstar/index.php/gallery/index
+---
