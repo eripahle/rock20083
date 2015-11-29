@@ -27,13 +27,19 @@ class GalleryPribadi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_GALLERY, GAMBAR_GALLERY', 'required'),
+			// array('GAMBAR_GALLERY', 'required'),
 			array('ID_USER', 'numerical', 'integerOnly'=>true),
 			array('ID_GALLERY', 'length', 'max'=>50),
 			array('ID_FANBASE', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('ID_GALLERY, ID_FANBASE, ID_USER, GAMBAR_GALLERY', 'safe', 'on'=>'search'),
+			array('GAMBAR_GALLERY', 
+				'file',
+				'types'=>'jpg, gif, png', 
+				'allowEmpty'=>true, 
+				'on'=>'update'), // this will allow empty field when page is update (remember here i create scenario update)
+			// array('title, ID_GALLERY', 'length', 'max'=>255, 'on'=>'insert,update'),
 		);
 	}
 

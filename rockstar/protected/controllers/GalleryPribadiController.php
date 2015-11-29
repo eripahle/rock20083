@@ -36,8 +36,8 @@ class GalleryPribadiController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('delete'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -64,19 +64,39 @@ class GalleryPribadiController extends Controller
 	{
 		$model=new GalleryPribadi;
 
+		 if(isset($_POST['GalleryPribadi']))
+        {
+            $rnd = rand(0,9999);  // generate random number between 0-9999
+            $model->attributes=$_POST['GalleryPribadi'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'GAMBAR_GALLERY');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+          	$model->ID_FANBASE = 1;
+			$model->ID_USER = Yii::app()->user->getId();
+            $model->GAMBAR_GALLERY = $fileName;
+ 			
+            if($model->save())
+            {
+                $uploadedFile->saveAs(Yii::app()->basePath.'/../images/'.$fileName);  // image will uplode to rootDirectory/banner/
+              	$this->redirect(array('index'));
+            }
+        }
+        $this->render('create',array(
+            'model'=>$model,
+        ));
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['GalleryPribadi']))
-		{
-			$model->attributes=$_POST['GalleryPribadi'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_GALLERY));
-		}
+		// if(isset($_POST['GalleryPribadi']))
+		// {
+		// 	$model->attributes=$_POST['GalleryPribadi'];
+		// 	if($model->save())
+		// 		$this->redirect(array('view','id'=>$model->ID_GALLERY));
+		// }
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		// $this->render('create',array(
+		// 	'model'=>$model,
+		// ));
 	}
 
 	/**
@@ -110,21 +130,27 @@ class GalleryPribadiController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		$model = GalleryPribadi::model()->findByAttributes(array("ID_GALLERY"=>$id));
+		unlink(Yii::app()->basePath.'/../images/'.$model->GAMBAR_GALLERY);
 		$this->loadModel($id)->delete();
-
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{	
+		$criteria = new CDbCriteria();
 		$dataProvider=new CActiveDataProvider('GalleryPribadi');
+		$id = Yii::app()->user->getId();
+		$criteria->condition = 'ID_USER = '.$id;
+		$criteria->order = 'ID_GALLERY DESC';
+		$gallery = GalleryPribadi::model()->findAll($criteria);
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'dataProvider'=>$dataProvider,'gallery'=>$gallery,
 		));
 	}
 
