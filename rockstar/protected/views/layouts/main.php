@@ -15,23 +15,32 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
-
+	 <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font.css" type="text/css" />
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" rel="stylesheet">
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
 
-<div class="container" id="page">
+<body style="background-image: url('media/3.jpg');">
 
-	<div id="header">
+<div class="container">
+ <div class="featured-image" style="background-image: url('media/a1.png')"></div>
+</div>
+
+<div class="container">
+	<!-- <div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+	</div> --><!-- header -->
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array(
 					'label'=>'Home', 
-					'url'=>array('/')),
+					'url'=>array('/'),					
+					'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Registrasi', 
 					'url'=>array('/transaksiregistrasi/create'),
@@ -60,7 +69,9 @@
 			),
 		)); ?>
 	</div><!-- mainmenu -->
-	<?php echo $content; ?>
+	<div class="container">
+  		<?php  echo $content;   ?>
+	</div>
 
 	<div class="clear"></div>
 
