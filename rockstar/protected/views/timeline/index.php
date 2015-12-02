@@ -8,9 +8,11 @@
 	<!-- left side column -->
 	<!--mid column-->
 	
-	<?php $this->renderpartial('../layouts/side-news');  ?>
 	<!-- right content column-->
-	<div class="col-md-6" >
+
+	<?php $this->renderpartial('../layouts/side-timeline-profile');  ?>
+
+	<div class="col-md-8" >
 		<div class="panel" style="min-width=500px;">
 			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">TIMELINE</div>   
 			<div class="panel-body">
@@ -57,6 +59,8 @@
 					<Br>
 					</div> 
 				</div>
+
+	<?php $this->renderpartial('../layouts/side-timeline-news');  ?>
 			</div>
 			<!-- </div> -->
 			<!-- </div> -->

@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="col-md-4">
 	<div class="panel" style="min-width:160px;">
         <div class="panel-heading text-center" style="background-color:#555;color:#eee;">NEWS</div> 
             <div class="panel-body" >
@@ -15,10 +15,8 @@
 				            ?>
 				            
 				            <tr>
-				                <td class="col-md-6">
-				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%;"></p>
-				                </td>
-				                <td class="col-md-6">
+				                <td>
+				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%">				                
 				                	<h3><b>Lorem Ipsum 1</b><h3>
 				                	<h5><?php echo $info ?></p></h5>
 				                	<a href=""><i>Read More</i></a> 
@@ -26,10 +24,9 @@
 						 	</tr>						 	
 
 				            <tr>
-				                <td class="col-md-6">
+				                <td>
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
-				                </td>
-				                <td class="col-md-6">
+				                
 				                	<h3><b>Lorem Ipsum 2</b><h3>
 				                	<h5><?php echo $info ?></p></h5>
 				                	<a href=""><i>Read More</i></a> 
@@ -39,8 +36,7 @@
 				            <tr>
 				                <td class="col-md-6">
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b6.jpg" style="width:100%;"></p>
-				                </td>
-				                <td class="col-md-6">
+				               
 				                	<h3><b>Lorem Ipsum 3</b><h3>
 				                	<h5><?php echo $info ?></p></h5>
 				                	<a href=""><i>Read More</i></a> 
@@ -50,8 +46,7 @@
 				            <tr>
 				                <td class="col-md-6">
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%;"></p>
-				                </td>
-				                <td class="col-md-6">
+				               
 				                	<h3><b>Lorem Ipsum 4</b><h3>
 				                	<h5><?php echo $info ?></p></h5>
 				                	<a href=""><i>Read More</i></a> 
@@ -61,8 +56,7 @@
 				            <tr>
 				                <td class="col-md-6">
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
-				                </td>
-				                <td class="col-md-6">
+				               
 				                	<h3><b>Lorem Ipsum 5</b><h3>
 				                	<h5><?php echo $info ?></p></h5>
 				                	<a href=""><i>Read More</i></a> 
