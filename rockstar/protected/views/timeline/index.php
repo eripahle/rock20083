@@ -16,9 +16,8 @@
 		<div class="panel" style="min-width=500px;">
 			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">TIMELINE</div>   
 			<div class="panel-body">
-				<br>
 				<div class="row">
-					<div class="col-sm-offset-1 col-sm-10" style="border: 1px solid #ccc;">
+					<div class="col-sm-offset-1 col-sm-10" style="solid #ccc;">
 
 					<?php $this->renderPartial('_form', array('model'=>$model)); ?>
 					<hr>
@@ -26,18 +25,26 @@
 					<?php 
 					foreach ($status as $stat) {?>
 					<div style="border:1px solid #ccc;padding:10px;overflow:auto;"> 
-						<div style="float:left;width: 80%;word-wrap: break-word;">
-							<?=  '<b>'.$stat['NAMA_LENGKAP'].' </b><br>'.$stat['KONTEN'] ?>
+						<div class="col-md-12" style="background:whitesmoke; padding:10px;">
+							<?=  '<a href=""><h3><b>'.$stat['NAMA_LENGKAP'].'</b></a></h3><h5>
+							Shared at '.$stat['DATETIME_STATUS'].'</h5>' ?>
 						</div>
-						<div style="float:right">
-							<i><?= $stat['DATETIME_STATUS'] ?></i>
+						<div class="col-md-11" style="padding-top:10px;">
+							<h4><?= $stat['KONTEN'] ?></h4>
+						</div>
+						<div class="col-md-1" style="float:right; padding-top:10px;">
+							<a href="#"> Like </a>
 						</div>
 						<hr>
 						<div>
-							<a href="#"> Like </a>
 							<form>
-								<textarea></textarea>
-								<input type="submit" value="Komentar">
+								<div class="col-md-11">
+									<textarea style="width:100%; resize:none" placeholder="Add a Comment"></textarea>
+								</div>
+								<div class="col-md-1">
+									<input type="submit" value="Add" style="float:right; width:47px; height:47px;">
+								</div>
+									
 							</form>
 						</div>
 					</div> <br>

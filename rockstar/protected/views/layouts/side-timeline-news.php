@@ -18,8 +18,7 @@
 				                <td>
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%">				                
 				                	<h3><b>Lorem Ipsum 1</b><h3>
-				                	<h5><?php echo $info ?></p></h5>
-				                	<a href=""><i>Read More</i></a> 
+				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>				                	 
 				                </td>						 
 						 	</tr>						 	
 
@@ -28,8 +27,7 @@
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
 				                
 				                	<h3><b>Lorem Ipsum 2</b><h3>
-				                	<h5><?php echo $info ?></p></h5>
-				                	<a href=""><i>Read More</i></a> 
+				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
 				                </td>						 
 						 	</tr>
 
@@ -38,8 +36,7 @@
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b6.jpg" style="width:100%;"></p>
 				               
 				                	<h3><b>Lorem Ipsum 3</b><h3>
-				                	<h5><?php echo $info ?></p></h5>
-				                	<a href=""><i>Read More</i></a> 
+				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5> 
 				                </td>						 
 						 	</tr>
 
@@ -48,8 +45,7 @@
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%;"></p>
 				               
 				                	<h3><b>Lorem Ipsum 4</b><h3>
-				                	<h5><?php echo $info ?></p></h5>
-				                	<a href=""><i>Read More</i></a> 
+				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
 				                </td>						 
 						 	</tr>						 	
 
@@ -58,8 +54,7 @@
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
 				               
 				                	<h3><b>Lorem Ipsum 5</b><h3>
-				                	<h5><?php echo $info ?></p></h5>
-				                	<a href=""><i>Read More</i></a> 
+				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
 				                </td>						 
 						 	</tr>
 
