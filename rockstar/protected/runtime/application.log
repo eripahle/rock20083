@@ -14266,3 +14266,29 @@ Stack trace:
 REQUEST_URI=/_rockstar/rockstar/index.php/gallerybarang/index
 HTTP_REFERER=http://localhost/_rockstar/rockstar/index.php/gallerybarang/create
 ---
+2015/12/02 17:09:27 [error] [php] Undefined variable: row (C:\xampp\htdocs\rock20083\rockstar\protected\views\layouts\side-news.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(869): TimelineController->renderFile()
+#1 C:\xampp\htdocs\rock20083\rockstar\protected\views\timeline\index.php(11): TimelineController->renderPartial()
+#2 C:\xampp\htdocs\rock20083\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\rock20083\yii\framework\web\CBaseController.php(95): TimelineController->renderInternal()
+#4 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(869): TimelineController->renderFile()
+#5 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(782): TimelineController->renderPartial()
+#6 C:\xampp\htdocs\rock20083\rockstar\protected\controllers\TimelineController.php(151): TimelineController->render()
+#7 C:\xampp\htdocs\rock20083\yii\framework\web\actions\CInlineAction.php(49): TimelineController->actionIndex()
+#8 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilterChain.php(133): TimelineController->runAction()
+#10 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CInlineFilter.php(58): TimelineController->filterAccessControl()
+#13 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(265): TimelineController->runActionWithFilters()
+#16 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(282): TimelineController->run()
+#17 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\rock20083\rockstar\index.php(13): CWebApplication->run()
+REQUEST_URI=/rock20083/rockstar/index.php/timeline
+in C:\xampp\htdocs\rock20083\rockstar\protected\views\layouts\side-news.php (21)
+in C:\xampp\htdocs\rock20083\rockstar\protected\views\timeline\index.php (11)
+in C:\xampp\htdocs\rock20083\rockstar\protected\controllers\TimelineController.php (151)
