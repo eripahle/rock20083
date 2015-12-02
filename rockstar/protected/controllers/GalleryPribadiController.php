@@ -6,7 +6,7 @@ class GalleryPribadiController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	// public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -69,11 +69,11 @@ class GalleryPribadiController extends Controller
             $rnd = rand(0,9999);  // generate random number between 0-9999
             $model->attributes=$_POST['GalleryPribadi'];
  
-            $uploadedFile=CUploadedFile::getInstance($model,'GAMBAR_GALLERY');
+            $uploadedFile=CUploadedFile::getInstance($model,'GAMBAR_GALLERY_PRIBADI');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
           	$model->ID_FANBASE = 1;
-			$model->ID_USER = Yii::app()->user->getId();
-            $model->GAMBAR_GALLERY = $fileName;
+			$model->ID_USERS = Yii::app()->user->getId();
+            $model->GAMBAR_GALLERY_PRIBADI = $fileName;
  			
             if($model->save())
             {
@@ -130,8 +130,8 @@ class GalleryPribadiController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$model = GalleryPribadi::model()->findByAttributes(array("ID_GALLERY"=>$id));
-		unlink(Yii::app()->basePath.'/../images/'.$model->GAMBAR_GALLERY);
+		$model = GalleryPribadi::model()->findByAttributes(array("ID_GALLERY_PRIBADI"=>$id));
+		unlink(Yii::app()->basePath.'/../images/'.$model->GAMBAR_GALLERY_PRIBADI);
 		$this->loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -146,8 +146,8 @@ class GalleryPribadiController extends Controller
 		$criteria = new CDbCriteria();
 		$dataProvider=new CActiveDataProvider('GalleryPribadi');
 		$id = Yii::app()->user->getId();
-		$criteria->condition = 'ID_USER = '.$id;
-		$criteria->order = 'ID_GALLERY DESC';
+		$criteria->condition = 'ID_USERS = '.$id;
+		$criteria->order = 'ID_GALLERY_PRIBADI DESC';
 		$gallery = GalleryPribadi::model()->findAll($criteria);
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,'gallery'=>$gallery,

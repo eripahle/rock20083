@@ -2,10 +2,21 @@
 /* @var $this TimelineController */
 /* @var $dataProvider CActiveDataProvider */
 ?>
-
-<h1>Timeline</h1>
-<hr>
-<h3>Create Status</h3>
+<!-- Begin Body -->
+<div style="min-width:500px;">
+	<!-- <div class="row"> -->
+	<!-- left side column -->
+	<!--mid column-->
+	
+	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
+	<!-- right content column-->
+	<div class="col-md-7" >
+		<div class="panel" style="min-width=500px;">
+			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">UPLOAD GALLERY PRIBADI</div>   
+			<div class="panel-body">
+				<br>
+				<div class="row">
+					<div class="col-sm-offset-1 col-sm-10" style="border: 1px solid #ccc;">
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
 <hr>
@@ -39,3 +50,16 @@ foreach ($status as $stat) {?>
 //         ),
 // ));
 ?>
+</div>
+						</div><!--/panel-body-->
+					</div><!--/panel-->
+					<!--/end right column-->
+					<Br>
+					</div> 
+				</div>
+
+				<?php $this->renderpartial('../layouts/side-social-feed');  ?>
+			</div>
+			<!-- </div> -->
+			<!-- </div> -->
+

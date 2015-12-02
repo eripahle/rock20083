@@ -3,45 +3,68 @@
 /* @var $model GalleryPribadi */
 /* @var $form CActiveForm */
 ?>
+	
 
-<div class="form">
-
-	<?php $form=$this->beginWidget('CActiveForm', array(
-		'id'=>'gallery-pribadi-form',
+<!-- Begin Body -->
+<div style="min-width:500px;">
+	<!-- <div class="row"> -->
+	<!-- left side column -->
+	<!--mid column-->
+	
+	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
+	<!-- right content column-->
+	<div class="col-md-7" >
+		<div class="panel" style="min-width=500px;">
+			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">UPLOAD GALLERY PRIBADI</div>   
+			<div class="panel-body">
+				<br>
+				<div class="row">
+					<div class="col-sm-offset-3 col-sm-5" style="border: 1px solid #ccc;">
+						<div class="form">
+							<?php $form=$this->beginWidget('CActiveForm', array(
+								'id'=>'gallery-pribadi-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-		'enableAjaxValidation'=>false,
-		'htmlOptions' => array(
-        				'enctype' => 'multipart/form-data',
-   						 ),
+								'enableAjaxValidation'=>false,
+								'htmlOptions' => array(
+									'enctype' => 'multipart/form-data',
+									),
 
-		)); ?>
+									)); ?>
 
-		<?php echo $form->errorSummary($model); ?>
+									<?php echo $form->errorSummary($model); ?>
 
-		<div class="row">
-			<?php echo $form->labelEx($model,'Upload Gambar'); ?>
-			<?php echo CHtml::activeFileField($model, 'GAMBAR_GALLERY'); ?> 
-			<?php echo $form->error($model,'GAMBAR_GALLERY'); ?>
-		</div>
-		<?php if($model->isNewRecord!='1'){ ?>
-		<div class="row">
-			<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->GAMBAR_GALLERY,"image",array("width"=>200)); ?>
-		</div>
-		<?}?>
-		<!-- 
-		<div class="row">
-			<?php echo $form->labelEx($model,'GAMBAR_GALLERY'); ?>
-			<?php echo $form->textArea($model,'GAMBAR_GALLERY',array('rows'=>6, 'cols'=>50)); ?>
-			<?php echo $form->error($model,'GAMBAR_GALLERY'); ?>
-		</div> -->
+									<div class="row">
+										<?php echo $form->labelEx($model,'Upload Gambar'); ?>
+										<?php echo CHtml::activeFileField($model, 'GAMBAR_GALLERY_PRIBADI'); ?> 
+										<?php echo $form->error($model,'GAMBAR_GALLERY_PRIBADI'); ?>
+									</div>
+									<?php if($model->isNewRecord!='1'){ ?>
+									<div class="row">
+										<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/'.$model->GAMBAR_GALLERY_PRIBADI,"image",array("width"=>200)); ?>
+									</div>
+									<?}?>
 
-		<div class="row buttons">
-			<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-		</div>
 
-		<?php $this->endWidget(); ?>
+									<div class="row buttons">
+										<?php echo CHtml::submitButton($model->isNewRecord ? 'Upload' : 'Save'); ?>
+									</div>
 
-</div><!-- form -->
+									<?php $this->endWidget(); ?>
+
+								</div><!-- form -->
+							</div>
+						</div><!--/panel-body-->
+					</div><!--/panel-->
+					<!--/end right column-->
+					<Br>
+					</div> 
+				</div>
+
+				<?php $this->renderpartial('../layouts/side-social-feed');  ?>
+			</div>
+			<!-- </div> -->
+			<!-- </div> -->
+

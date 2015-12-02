@@ -1,12 +1,12 @@
 <?php
 
-class TransaksiRegistrasiController extends Controller
+class GalleryBarangController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	// public $layout='//layouts/column1';
+	// public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -18,13 +18,7 @@ class TransaksiRegistrasiController extends Controller
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
-	public function actions() { 
-		return array( 'captcha'=>array( 
-			'class'=>'CCaptchaAction', 
-			'backColor'=>0xFFFFFF, 
-			), 
-		); 
-	}
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -33,18 +27,10 @@ class TransaksiRegistrasiController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', // allow captcha library
-				'actions'=>array('create','captcha'), 
-				'users'=>array('*'),
-			),
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			 array('allow', 
-			 	'actions'=>array('update','view'), 
-			 	'users'=>array('@'), 
-			 ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
@@ -76,52 +62,38 @@ class TransaksiRegistrasiController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new TransaksiRegistrasi;
-		$model_user=new Users;
+		$model=new GalleryBarang;
+
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model,$model_user);
-		
-		if(isset($_POST['TransaksiRegistrasi'])){
-		// 	if($model->validate() && $model_user->validate()){
-		// 	echo "oke";
-		// }else{
-		// 	echo "ga oke";
-		// }
-		// die();
-			$model->attributes=$_POST['TransaksiRegistrasi'];
-			$model_user->attributes=$_POST['Users'];
-			$cek= $model->validate();
-			$cek= $model_user->validate() && $cek;
-			if($cek){
-				// if($model->save()){
-				$number='';
-				for ($i=0; $i < 16 ; $i++) { 
-					$number.=rand(0,9);
-				}
-				$model->ID_FANBASE = 1;
-				$model->NO_SAKTI = $number;
-				$model->VAD = '-';
-				$model->STATUS_REKONSILIASI = 'N';
-				$model->STATUS_RELEASE = 'N';
-				$tgl = explode('/',$_POST['TransaksiRegistrasi']['TANGGAL']);
-				$model->TANGGAL=$tgl[2].'-'.$tgl[0].'-'.$tgl[1];
-				// print_r($model); die();
-				$model->save(false);
+		// $this->performAjaxValidation($model);
 
-				$model_user->PASSWORD = md5($_POST['Users']['PASSWORD']);
-				$model_user->ID_FANBASE = $model->ID_FANBASE;
-				$model_user->ID_REGISTRASI= $model->ID_REGISTRASI;
-				$model_user->ID_JENIS=4;
-				$model_user->VAS='-';
-				$model_user->STATUS='N';
-				$model_user->save(false);
+		if(isset($_POST['GalleryBarang']))
+		{
+			
+            $model->attributes=$_POST['GalleryBarang'];
+ 
+            $rnd = rand(0,9999);  // generate random number between 0-9999
+            $uploadedFile=CUploadedFile::getInstance($model,'SAMPEL_GALLERY');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            $model->SAMPEL_GALLERY = $fileName;
 
-				$this->redirect(array('site/login','id'=>$model->ID_REGISTRASI));
-			}
+            $rnd = rand(0,9999);
+            $uploadedFile2=CUploadedFile::getInstance($model,'GAMBAR_GALLERY');
+            $fileName2 = "{$rnd}-{$uploadedFile2}";  // random number + file name
+            $model->GAMBAR_GALLERY = $fileName2;
+ 			
+			$model->ID_USERS = Yii::app()->user->getId();
+
+            if($model->save())
+            {
+                $uploadedFile->saveAs(Yii::app()->basePath.'/../images/berita/'.$fileName);  // image will uplode to rootDirectory/banner/
+              	$uploadedFile2->saveAs(Yii::app()->basePath.'/../images/berita/'.$fileName2);  // image will uplode to rootDirectory/banner/
+              	$this->redirect(array('index'));
+            }
 		}
 
 		$this->render('create',array(
-			'model'=>$model,'model_user'=>$model_user,
+			'model'=>$model,
 		));
 	}
 
@@ -137,11 +109,11 @@ class TransaksiRegistrasiController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['TransaksiRegistrasi']))
+		if(isset($_POST['GalleryBarang']))
 		{
-			$model->attributes=$_POST['TransaksiRegistrasi'];
+			$model->attributes=$_POST['GalleryBarang'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_REGISTRASI));
+				$this->redirect(array('view','id'=>$model->ID_GALLERY_BARANG));
 		}
 
 		$this->render('update',array(
@@ -156,11 +128,13 @@ class TransaksiRegistrasiController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		$model = GalleryBarang::model()->findByAttributes(array("ID_GALLERY_BARANG"=>$id));
+		unlink(Yii::app()->basePath.'/../images/berita/'.$model->SAMPEL_GALLERY);
+		unlink(Yii::app()->basePath.'/../images/berita/'.$model->GAMBAR_GALLERY);
 		$this->loadModel($id)->delete();
-
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**
@@ -168,9 +142,15 @@ class TransaksiRegistrasiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('TransaksiRegistrasi');
+
+		$criteria = new CDbCriteria();
+		$dataProvider=new CActiveDataProvider('GalleryBarang');
+		$id = Yii::app()->user->getId();
+		// $criteria->condition = 'ID_USERS = '.$id;
+		$criteria->order = 'ID_GALLERY_BARANG DESC';
+		$gallery = GalleryBarang::model()->findAll($criteria);
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'dataProvider'=>$dataProvider,'gallery'=>$gallery,
 		));
 	}
 
@@ -179,10 +159,10 @@ class TransaksiRegistrasiController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new TransaksiRegistrasi('search');
+		$model=new GalleryBarang('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['TransaksiRegistrasi']))
-			$model->attributes=$_GET['TransaksiRegistrasi'];
+		if(isset($_GET['GalleryBarang']))
+			$model->attributes=$_GET['GalleryBarang'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -193,12 +173,12 @@ class TransaksiRegistrasiController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return TransaksiRegistrasi the loaded model
+	 * @return GalleryBarang the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=TransaksiRegistrasi::model()->findByPk($id);
+		$model=GalleryBarang::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -206,14 +186,13 @@ class TransaksiRegistrasiController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param TransaksiRegistrasi $model the model to be validated
+	 * @param GalleryBarang $model the model to be validated
 	 */
-	protected function performAjaxValidation($model,$model_user)
+	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='registrasi-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='gallery-barang-form')
 		{
 			echo CActiveForm::validate($model);
-			echo CActiveForm::validate($model_user);
 			Yii::app()->end();
 		}
 	}

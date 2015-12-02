@@ -6,7 +6,7 @@ class TimelineController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	// public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -67,11 +67,11 @@ class TimelineController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Status']))
+		if(isset($_POST['StatusUsers']))
 		{
-			$model->attributes=$_POST['Status'];
+			$model->attributes=$_POST['StatusUsers'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_STATUS));
+				$this->redirect(array('view','id'=>$model->ID_STATUS_USERS));
 		}
 
 		$this->render('create',array(
@@ -123,11 +123,10 @@ class TimelineController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria();
-		$model = new Status;
-		$user = new User;
+		$model = new StatusUsers;
+		$user = new Users;
 		// $criteria->limit = 1;
-		$criteria->order= 'ID_STATUS DESC';
-		$criteria->order= 'ID_STATUS DESC';
+		$criteria->order= 'ID_STATUS_USERS DESC';
 		// $status = Status::model()->findAll($criteria);
 		$status = $model->get_all_data();
 		// print_r($status); die();
@@ -137,13 +136,13 @@ class TimelineController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Status']))
+		if(isset($_POST['StatusUsers']))
 		{
 			// $model->attributes=$_POST['Status'];
-			// echo date('Y-m-d').'-'.time(' H-i-s'); die();
+			// echo date('Y-m-d').'-'.time('H-i-s'); die();
 			$model->ID_FANBASE = 1;
-			$model->ID_USER = Yii::app()->user->getId();
-			$model->KONTEN = $_POST['Status']['KONTEN'];
+			$model->ID_USERS = Yii::app()->user->getId();
+			$model->KONTEN = $_POST['StatusUsers']['KONTEN'];
 			if($model->save())
 				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
 		}

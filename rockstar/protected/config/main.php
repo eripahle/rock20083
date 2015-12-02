@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Website Title',
+	'name'=>'Soniq',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -83,6 +83,6 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 
-	'defaultController'=>'TransaksiRegistrasi/',
+	'defaultController'=>'Site/',
 
 );

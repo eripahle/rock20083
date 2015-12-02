@@ -5,6 +5,9 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+
+	// public $layout='//layouts/man';
+
 	public function actions()
 	{
 		return array(
@@ -29,7 +32,16 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$criteria = new CDbCriteria();
+		$dataProvider=new CActiveDataProvider('GalleryBarang');
+		$id = Yii::app()->user->getId();
+		// $criteria->condition = 'ID_USERS = '.$id;
+		$criteria->order = 'ID_GALLERY_BARANG DESC';
+		$gallery = GalleryBarang::model()->findAll($criteria);
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,'gallery'=>$gallery,
+		));
+		// $this->render('index');
 	}
 	public function ActionBa()
 	{
@@ -100,7 +112,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'transaksi_registrasi':
  * @property integer $ID_REGISTRASI
+ * @property string $ID_FANBASE
  * @property string $NAMA_LENGKAP
  * @property string $TEMPAT
  * @property string $TANGGAL
@@ -20,12 +21,14 @@
  * @property string $NAMA_AYAH
  * @property string $NO_SAKTI
  * @property string $CORP
- * @property string $VID
+ * @property string $VAD
  * @property string $STATUS_REKONSILIASI
  * @property string $STATUS_RELEASE
+ * @property string $TANGGAL_TRANSAKSI
  *
  * The followings are the available model relations:
- * @property User[] $users
+ * @property Fanbase $iDFANBASE
+ * @property Users[] $users
  */
 class TransaksiRegistrasi extends CActiveRecord
 {
@@ -45,40 +48,16 @@ class TransaksiRegistrasi extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-		 // if( Yii::app()->user->getState('role') =="1")
-   //      {
-   //           $arr =array('index','calendar','contact','staff','service');   // give all access to admin
-   //      }else if( Yii::app()->user->getState('role') =="2")
-   //              {
-   //                      $arr =array('index','staff','staffcalendar','update');   // give all access to staff
-   //              }
-   //              else
-   //              {
-   //        $arr = array('');          //  no access to other user
-   //      }
-                
-   //      return array(                   
-   //              array('allow', // allow authenticated user to perform 'create' and 'update' actions
-   //                              'actions'=>$arr,
-   //                              'users'=>array('@'),
-   //                      ),
-                                                
-   //                      array('deny',  // deny all users
-   //                              'users'=>array('*'),
-   //                      ),
-   //              );
 		return array(
-			// array('verifyCode, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH,CORP', 'required','message'=>'Data {attribute} Harus Diisi'),
-			array('NAMA_LENGKAP', 'required'),
-			array('NAMA_LENGKAP', 'length', 'max'=>50),
 			array('verifyCode', 'captcha', 'allowEmpty'=>!extension_loaded('gd')),
+			array('NAMA_LENGKAP, TEMPAT, TANGGAL, EMAIL', 'required'),
+			array('ID_FANBASE', 'length', 'max'=>20),
+			array('NAMA_LENGKAP', 'length', 'max'=>50),
 			array('TEMPAT, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, CORP', 'length', 'max'=>30),
 			array('NEGARA, PROVINSI, KOTA', 'length', 'max'=>40),
-			array('KODE_POS', 'length', 'max'=>5),
-			array('NO_TELP', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_REGISTRASI, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, NO_SAKTI, CORP, VAD, STATUS_REKONSILIASI, STATUS_RELEASE', 'safe', 'on'=>'search'),
+			array('ID_REGISTRASI, ID_FANBASE, NAMA_LENGKAP, TEMPAT, TANGGAL, NEGARA, PROVINSI, KOTA, ALAMAT, KODE_POS, NO_TELP, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, NO_SAKTI, CORP, VAD, STATUS_REKONSILIASI, STATUS_RELEASE, TANGGAL_TRANSAKSI', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,7 +69,8 @@ class TransaksiRegistrasi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::HAS_MANY, 'User', 'ID_REGISTRASI'),
+			// 'iDFANBASE' => array(self::BELONGS_TO, 'Fanbase', 'ID_FANBASE'),
+			// 'users' => array(self::HAS_MANY, 'Users', 'ID_REGISTRASI'),
 		);
 	}
 
@@ -100,6 +80,8 @@ class TransaksiRegistrasi extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'ID_REGISTRASI' => 'Id Registrasi',
+			'ID_FANBASE' => 'Id Fanbase',
 			'NAMA_LENGKAP' => 'Nama Lengkap',
 			'TEMPAT' => 'Tempat',
 			'TANGGAL' => 'Tanggal',
@@ -118,6 +100,7 @@ class TransaksiRegistrasi extends CActiveRecord
 			'VAD' => 'Vad',
 			'STATUS_REKONSILIASI' => 'Status Rekonsiliasi',
 			'STATUS_RELEASE' => 'Status Release',
+			'TANGGAL_TRANSAKSI' => 'Tanggal Transaksi',
 		);
 	}
 
@@ -140,6 +123,7 @@ class TransaksiRegistrasi extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID_REGISTRASI',$this->ID_REGISTRASI);
+		$criteria->compare('ID_FANBASE',$this->ID_FANBASE,true);
 		$criteria->compare('NAMA_LENGKAP',$this->NAMA_LENGKAP,true);
 		$criteria->compare('TEMPAT',$this->TEMPAT,true);
 		$criteria->compare('TANGGAL',$this->TANGGAL,true);
@@ -158,6 +142,7 @@ class TransaksiRegistrasi extends CActiveRecord
 		$criteria->compare('VAD',$this->VAD,true);
 		$criteria->compare('STATUS_REKONSILIASI',$this->STATUS_REKONSILIASI,true);
 		$criteria->compare('STATUS_RELEASE',$this->STATUS_RELEASE,true);
+		$criteria->compare('TANGGAL_TRANSAKSI',$this->TANGGAL_TRANSAKSI,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

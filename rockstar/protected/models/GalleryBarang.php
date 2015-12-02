@@ -1,26 +1,31 @@
 <?php
 
 /**
- * This is the model class for table "gallery_pribadi".
+ * This is the model class for table "gallery_barang".
  *
- * The followings are the available columns in table 'gallery_pribadi':
- * @property integer $ID_GALLERY_PRIBADI
- * @property string $ID_FANBASE
+ * The followings are the available columns in table 'gallery_barang':
+ * @property integer $ID_GALLERY_BARANG
  * @property integer $ID_USERS
- * @property string $GAMBAR_GALLERY_PRIBADI
+ * @property string $NAMA_GALLERY
+ * @property string $KODE_GALLERY
+ * @property string $JENIS_GALLERY
+ * @property string $SAMPEL_GALLERY
+ * @property string $GAMBAR_GALLERY
+ * @property string $HARGA_POINT
+ * @property string $HARGA_POINT_BONUS
+ * @property string $HARGA_CASH
  *
  * The followings are the available model relations:
- * @property Fanbase $iDFANBASE
  * @property Users $iDUSERS
  */
-class GalleryPribadi extends CActiveRecord
+class GalleryBarang extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'gallery_pribadi';
+		return 'gallery_barang';
 	}
 
 	/**
@@ -31,12 +36,15 @@ class GalleryPribadi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('GAMBAR_GALLERY_PRIBADI', 'required'),
-			array('ID_USERS', 'numerical', 'integerOnly'=>true),
-			array('ID_FANBASE', 'length', 'max'=>20),
+			array('NAMA_GALLERY, KODE_GALLERY, JENIS_GALLERY, HARGA_POINT, HARGA_POINT_BONUS, HARGA_CASH', 'required'),
+			array('ID_GALLERY_BARANG, ID_USERS', 'numerical', 'integerOnly'=>true),
+			array('NAMA_GALLERY, JENIS_GALLERY', 'length', 'max'=>50),
+			array('KODE_GALLERY', 'length', 'max'=>32),
+			array('HARGA_POINT, HARGA_POINT_BONUS, HARGA_CASH', 'length', 'max'=>20),
+			array('SAMPEL_GALLERY, GAMBAR_GALLERY', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_GALLERY_PRIBADI, ID_FANBASE, ID_USERS, GAMBAR_GALLERY_PRIBADI', 'safe', 'on'=>'search'),
+			array('ID_GALLERY_BARANG, ID_USERS, NAMA_GALLERY, KODE_GALLERY, JENIS_GALLERY, SAMPEL_GALLERY, GAMBAR_GALLERY, HARGA_POINT, HARGA_POINT_BONUS, HARGA_CASH', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +56,6 @@ class GalleryPribadi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'iDFANBASE' => array(self::BELONGS_TO, 'Fanbase', 'ID_FANBASE'),
 			'iDUSERS' => array(self::BELONGS_TO, 'Users', 'ID_USERS'),
 		);
 	}
@@ -59,10 +66,16 @@ class GalleryPribadi extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ID_GALLERY_PRIBADI' => 'Id Gallery Pribadi',
-			'ID_FANBASE' => 'Id Fanbase',
+			'ID_GALLERY_BARANG' => 'Id Gallery Barang',
 			'ID_USERS' => 'Id Users',
-			'GAMBAR_GALLERY_PRIBADI' => 'Gambar Gallery Pribadi',
+			'NAMA_GALLERY' => 'Nama Gallery',
+			'KODE_GALLERY' => 'Kode Gallery',
+			'JENIS_GALLERY' => 'Jenis Gallery',
+			'SAMPEL_GALLERY' => 'Sampel Gallery',
+			'GAMBAR_GALLERY' => 'Gambar Gallery',
+			'HARGA_POINT' => 'Harga Point',
+			'HARGA_POINT_BONUS' => 'Harga Point Bonus',
+			'HARGA_CASH' => 'Harga Cash',
 		);
 	}
 
@@ -84,10 +97,16 @@ class GalleryPribadi extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID_GALLERY_PRIBADI',$this->ID_GALLERY_PRIBADI);
-		$criteria->compare('ID_FANBASE',$this->ID_FANBASE,true);
+		$criteria->compare('ID_GALLERY_BARANG',$this->ID_GALLERY_BARANG);
 		$criteria->compare('ID_USERS',$this->ID_USERS);
-		$criteria->compare('GAMBAR_GALLERY_PRIBADI',$this->GAMBAR_GALLERY_PRIBADI,true);
+		$criteria->compare('NAMA_GALLERY',$this->NAMA_GALLERY,true);
+		$criteria->compare('KODE_GALLERY',$this->KODE_GALLERY,true);
+		$criteria->compare('JENIS_GALLERY',$this->JENIS_GALLERY,true);
+		$criteria->compare('SAMPEL_GALLERY',$this->SAMPEL_GALLERY,true);
+		$criteria->compare('GAMBAR_GALLERY',$this->GAMBAR_GALLERY,true);
+		$criteria->compare('HARGA_POINT',$this->HARGA_POINT,true);
+		$criteria->compare('HARGA_POINT_BONUS',$this->HARGA_POINT_BONUS,true);
+		$criteria->compare('HARGA_CASH',$this->HARGA_CASH,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +117,7 @@ class GalleryPribadi extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return GalleryPribadi the static model class
+	 * @return GalleryBarang the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

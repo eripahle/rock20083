@@ -7,7 +7,7 @@
  * @property integer $ID_USER
  * @property integer $ID_REGISTRASI
  * @property integer $ID_JENIS
- * @property string $USERNAME
+ * @property string $NOMER_SAKTI
  * @property string $PASSWORD
  * @property string $NOMER_SAKTI
  * @property string $VAS
@@ -38,17 +38,16 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 
-			array('USERNAME, PASSWORD,password2', 'required','message'=>'Data {attribute} Harus Diisi'),
-			array('USERNAME', 'length', 'max'=>20),
-			array('PASSWORD', 'length', 'max'=>30),
-			array('USERNAME','unique','message'=>'Username "<b>{value}</b>" Sudah Digunakan'),
+			array('NOMER_SAKTI ', 'required','message'=>'Data {attribute} Harus Diisi'),
+			array('NOMER_SAKTI', 'length', 'max'=>20),
+			array('NOMER_SAKTI','unique','message'=>'NOMER_SAKTI "<b>{value}</b>" Sudah Digunakan'),
 			// array('PASSWORD, password2', 'required', 'on' => 'create'),
             // array('PASSWORD, password2', 'length', 'min' => 6, 'max' => 30, 'on' => array('create', 'update')),
-            array('password2', 'compare', 'compareAttribute' => 'PASSWORD','message'=>'Password Harus Sama'),
+            // array('password2', 'compare', 'compareAttribute' => 'PASSWORD','message'=>'Password Harus Sama'),
             // array('PASSWORD, password2', 'length', 'min' => 8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_USER, ID_REGISTRASI, ID_JENIS, USERNAME, PASSWORD, NOMER_SAKTI, VAS, STATUS', 'safe', 'on'=>'search'),
+			array('ID_USER, ID_REGISTRASI, ID_JENIS, NOMER_SAKTI, PASSWORD, VAS, STATUS', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -89,7 +88,6 @@ class User extends CActiveRecord
 			'ID_USER' => 'Id User',
 			'ID_REGISTRASI' => 'Id Registrasi',
 			'ID_JENIS' => 'Id Jenis',
-			'USERNAME' => 'Username',
 			'PASSWORD' => 'Password',
 			'NOMER_SAKTI' => 'Nomer Sakti',
 			'VAS' => 'Vas',
@@ -118,7 +116,6 @@ class User extends CActiveRecord
 		$criteria->compare('ID_USER',$this->ID_USER);
 		$criteria->compare('ID_REGISTRASI',$this->ID_REGISTRASI);
 		$criteria->compare('ID_JENIS',$this->ID_JENIS);
-		$criteria->compare('USERNAME',$this->USERNAME,true);
 		$criteria->compare('PASSWORD',$this->PASSWORD,true);
 		$criteria->compare('NOMER_SAKTI',$this->NOMER_SAKTI,true);
 		$criteria->compare('VAS',$this->VAS,true);
