@@ -1,0 +1,34 @@
+<?php
+class Nosak extends CI_Model {
+
+
+	function remove_checked_nosak() {
+		$action = $this->input->post('action');
+		
+			$delete = $this->input->post('msg');
+			for ($i=0; $i < count($delete) ; $i++) { 
+				$array10 = array("", "","", "","");
+				$fp = fopen('./data/nosak.csv', 'r+');
+            	foreach($data_upload_csv as $item):
+                
+                    foreach($data_upload_csv as $item):
+                         if($delete[i]==item[0])
+                         {
+                            $sama = 1;
+                         }
+
+                    endforeach;
+                    if($sama==0)
+                    {
+                        fputcsv($fp, $array10);
+                    }
+
+                    
+            endforeach;
+            fclose($fp);
+
+			}
+	}
+
+}
+?>
