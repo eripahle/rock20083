@@ -154,8 +154,9 @@ class TransaksiRegistrasiController extends Controller
 	public function actionProfile()
 	{
 		$id = Yii::app()->user->getId();
-		// $criteria->condition = 'ID_USERS = '.$id;
-		$profile = TransaksiRegistrasi::model()->findbyPk($id);
+		$criteria = new CDbCriteria();
+		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
+		// print_r($profile); die();
 		$this->render('profile',array('data'=>$profile,));
 	}
 

@@ -37,7 +37,6 @@ $this->menu=array(
 		'NAMA_AYAH',
 		'NO_SAKTI',
 		'CORP',
-		'VID',
 		'STATUS_REKONSILIASI',
 		'STATUS_RELEASE',
 	),

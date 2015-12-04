@@ -70,10 +70,6 @@
 	<?php echo CHtml::encode($data->CORP); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('VID')); ?>:</b>
-	<?php echo CHtml::encode($data->VID); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('STATUS_REKONSILIASI')); ?>:</b>
 	<?php echo CHtml::encode($data->STATUS_REKONSILIASI); ?>
 	<br />

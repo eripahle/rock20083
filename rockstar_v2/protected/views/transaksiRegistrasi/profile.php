@@ -54,93 +54,97 @@
 		</div>	
 	</div>
 
+	
+
 	<div class="col-md-8" >
 		<div class="panel" style="min-width=500px;">
-			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">PROFILE <?php echo CHtml::encode($data->NAMA_LENGKAP); ?></div>   
+		<?php foreach ($data as $data) {?>
+			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">PROFILE <?php echo CHtml::encode($data['NAMA_LENGKAP']); ?></div>   
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-12" style="solid #ccc;">					
 						<hr>
 						<div class="view">
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NAMA_LENGKAP')); ?>:</b>
-							<?php echo CHtml::encode($data->NAMA_LENGKAP); ?>
+							<b>NAMA_LENGKAP :</b>
+							<?php echo CHtml::encode($data['NAMA_LENGKAP']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('TEMPAT')); ?>:</b>
-							<?php echo CHtml::encode($data->TEMPAT); ?>
+							<b> TEMPAT :</b>
+							<?php echo CHtml::encode($data['TEMPAT']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('TANGGAL')); ?>:</b>
-							<?php echo CHtml::encode($data->TANGGAL); ?>
+							<b> TANGGAL :</b>
+							<?php echo CHtml::encode($data['TANGGAL']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NEGARA')); ?>:</b>
-							<?php echo CHtml::encode($data->NEGARA); ?>
+							<b> NEGARA :</b>
+							<?php echo CHtml::encode($data['NEGARA']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('PROVINSI')); ?>:</b>
-							<?php echo CHtml::encode($data->PROVINSI); ?>
+							<b> PROVINSI :</b>
+							<?php echo CHtml::encode($data['PROVINSI']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('KOTA')); ?>:</b>
-							<?php echo CHtml::encode($data->KOTA); ?>
+							<b> KOTA :</b>
+							<?php echo CHtml::encode($data['KOTA']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('ALAMAT')); ?>:</b>
-							<?php echo CHtml::encode($data->ALAMAT); ?>
+							<b> ALAMAT :</b>
+							<?php echo CHtml::encode($data['ALAMAT']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('KODE_POS')); ?>:</b>
-							<?php echo CHtml::encode($data->KODE_POS); ?>
+							<b> KODE_POS :</b>
+							<?php echo CHtml::encode($data['KODE_POS']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NO_TELP')); ?>:</b>
-							<?php echo CHtml::encode($data->NO_TELP); ?>
+							<b> NO_TELP :</b>
+							<?php echo CHtml::encode($data['NO_TELP']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('EMAIL')); ?>:</b>
-							<?php echo CHtml::encode($data->EMAIL); ?>
+							<b> EMAIL :</b>
+							<?php echo CHtml::encode($data['EMAIL']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('TWITTER')); ?>:</b>
-							<?php echo CHtml::encode($data->TWITTER); ?>
+							<b> TWITTER :</b>
+							<?php echo CHtml::encode($data['TWITTER']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NAMA_IBU')); ?>:</b>
-							<?php echo CHtml::encode($data->NAMA_IBU); ?>
+							<b> NAMA_IBU :</b>
+							<?php echo CHtml::encode($data['NAMA_IBU']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NAMA_AYAH')); ?>:</b>
-							<?php echo CHtml::encode($data->NAMA_AYAH); ?>
+							<b> NAMA_AYAH :</b>
+							<?php echo CHtml::encode($data['NAMA_AYAH']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('NO_SAKTI')); ?>:</b>
-							<?php echo CHtml::encode($data->NO_SAKTI); ?>
+							<b> NO_SAKTI :</b>
+							<?php echo CHtml::encode($data['NO_SAKTI']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('CORP')); ?>:</b>
-							<?php echo CHtml::encode($data->CORP); ?>
+							<b> CORP :</b>
+							<?php echo CHtml::encode($data['CORP']); ?>
 							<br />
-							<b><?php echo CHtml::encode($data->getAttributeLabel('STATUS_REKONSILIASI')); ?>:</b>
-							<?php echo CHtml::encode($data->STATUS_REKONSILIASI); ?>
+							<b> STATUS_REKONSILIASI :</b>
+							<?php echo CHtml::encode($data['STATUS_REKONSILIASI']); ?>
 							<br />
 
-							<b><?php echo CHtml::encode($data->getAttributeLabel('STATUS_RELEASE')); ?>:</b>
-							<?php echo CHtml::encode($data->STATUS_RELEASE); ?>
+							<b> STATUS_RELEASE :</b>
+							<?php echo CHtml::encode($data['STATUS_RELEASE']); ?>
 							<br />
 							<?php
 							?>
 
 						</div>
 						<br>
-					<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/transaksiregistrasi/update/<?php echo CHtml::encode($data->ID_REGISTRASI); ?>" class="btn btn-success">EDIT</a>
+					<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/transaksiregistrasi/update/<?php echo CHtml::encode($data['ID_REGISTRASI']); ?>" class="btn btn-success">EDIT</a>
 					</div>
 				</div><!--/panel-body-->
 			</div><!--/panel-->
 			<!--/end right column-->
 			<Br>
-			</div> 
+			</div>
+			<?php } ?> 
 		</div>
 
 		<?php $this->renderpartial('../layouts/side-timeline-news');  ?>

@@ -73,8 +73,8 @@ class TransaksiRegistrasi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			// 'iDFANBASE' => array(self::BELONGS_TO, 'Fanbase', 'ID_FANBASE'),
-			// 'users' => array(self::HAS_MANY, 'Users', 'ID_REGISTRASI'),
+			'iDFANBASE' => array(self::BELONGS_TO, 'Fanbase', 'ID_FANBASE'),
+			'users' => array(self::HAS_MANY, 'Users', 'ID_REGISTRASI'),
 		);
 	}
 
@@ -152,6 +152,17 @@ class TransaksiRegistrasi extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	public function get_data_profile($id)
+        {            
+           $sql = "SELECT * 
+            FROM users,transaksi_registrasi
+            WHERE users.ID_USERS = $id AND users.ID_REGISTRASI = transaksi_registrasi.ID_REGISTRASI";
+    // $sql = "SELECT * FROM STATUS";
+    $data = Yii::app()->db
+        ->createCommand($sql)
+        ->queryAll();
+    return $data;
+        }
 
 	/**
 	 * Returns the static model of the specified AR class.

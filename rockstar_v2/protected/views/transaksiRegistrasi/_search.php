@@ -92,11 +92,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'VID'); ?>
-		<?php echo $form->textField($model,'VID',array('size'=>16,'maxlength'=>16)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'STATUS_REKONSILIASI'); ?>
 		<?php echo $form->textField($model,'STATUS_REKONSILIASI',array('size'=>1,'maxlength'=>1)); ?>
 	</div>
