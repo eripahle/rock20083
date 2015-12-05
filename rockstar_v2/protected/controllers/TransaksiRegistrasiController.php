@@ -115,23 +115,49 @@ class TransaksiRegistrasiController extends Controller
 				$model_user->VAS='-';
 				$model_user->STATUS=0;
 				$model_user->save(false);
-				
-				$from = 'arf.sendmailer@gmail.com';
-				$subject = "Konfirmasi Registrasi Soniq";
-				$message = "<h1> Hello, ".$model->NAMA_LENGKAP."</h1><br> Virtual ID anda : <b>".$model->VAD."</b> <br> Password anda : <b>".$pass."</b>";
-				$to = $model->EMAIL;
 
-				$mail=Yii::app()->Smtpmail;
-				$mail->SetFrom('$from', 'Admin Soniq');
-				$mail->Subject    = $subject;
-				$mail->MsgHTML($message);
-				$mail->AddAddress($to, "");
-				// $mail->Send();
-				if(!$mail->Send()) {
+				Yii::import('application.extensions.phpmailer.JPhpMailer');
+				$mail = new JPhpMailer;
+				$mail->isSMTP();
+				$mail->Debugoutput = 'html';
+				$mail->Host = 'smtp.gmail.com';
+				$mail->Port = 587;
+				$mail->SMTPSecure = 'tls';
+				$mail->SMTPAuth = true;
+				$mail->Username = "arf.sendmailer@gmail.com";
+				$mail->Password = "sendmailer";
+				$mail->setFrom('arf.sendmailer@gmail.com', 'Admin Soniq');
+				// $mail->addReplyTo('replyto@example.com', 'First Last');
+				$mail->addAddress($model->EMAIL,$model->NAMA_LENGKAP);
+				$mail->Subject = 'Konfirmasi Registrasi Soniq';
+				$mail->MsgHTML('<h1> Hello, '.$model->NAMA_LENGKAP.'</h1><br> Virtual ID anda : <b>'.$model->VAD.'</b> <br> Password anda : <b>'.$pass.'</b>');
+				// $mail->Body    = '';
+				// $mail->AltBody = 'This is a plain-text message body';
+				//Attach an image file
+				//$mail->addAttachment('images/phpmailer_mini.png');
+				//send the message, check for errors
+				if (!$mail->send()) {
 					$res = "Email Gagal Dikirim";
 				}else {
 					$res = "Email Sudah Dikirm";
 				}
+
+				// $from = 'arf.sendmailer@gmail.com';
+				// $subject = "Konfirmasi Registrasi Soniq";
+				// $message = "<h1> Hello, ".$model->NAMA_LENGKAP."</h1><br> Virtual ID anda : <b>".$model->VAD."</b> <br> Password anda : <b>".$pass."</b>";
+				// $to = $model->EMAIL;
+
+				// $mail=Yii::app()->Smtpmail;
+				// $mail->SetFrom('$from', 'Admin Soniq');
+				// $mail->Subject    = $subject;
+				// $mail->MsgHTML($message);
+				// $mail->AddAddress($to, "");
+				// // $mail->Send();
+				// if(!$mail->Send()) {
+				// 	$res = "Email Gagal Dikirim";
+				// }else {
+				// 	$res = "Email Sudah Dikirm";
+				// }
 				Yii::app()->user->setFlash('Virtual ID',$model->VAD);
 				Yii::app()->user->setFlash('Password',$pass);
 				Yii::app()->user->setFlash('Email',$model->EMAIL);

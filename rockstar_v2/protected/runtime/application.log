@@ -14807,3 +14807,21 @@ in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
 2015/12/05 06:12:26 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
 in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
 in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 06:41:00 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (194)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 07:22:28 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 07:24:34 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 07:26:18 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 07:27:13 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/05 07:30:12 [warning] [application] Failed to set unsafe attribute "NO_SAKTI" of "TransaksiRegistrasi".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TransaksiRegistrasiController.php (91)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)

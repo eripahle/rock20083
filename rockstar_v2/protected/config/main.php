@@ -39,16 +39,16 @@ return array(
 			),
 
 		// uncomment the following to enable URLs in path-format
-		'Smtpmail'=>array(
-			'class'=>'application.extensions.smtpmail.PHPMailer',
-			'Host'=>"smtp.gmail.com",
-			'Username'=>'arf.sendmailer@gmail.com',
-			'Password'=>'sendmailer',
-			'Mailer'=>'smtp',
-			 'Port'=>587,
-            'SMTPAuth'=>true,
-            'SMTPSecure' => 'tls'
-			),
+		// 'Smtpmail'=>array(
+		// 	'class'=>'application.extensions.smtpmail.PHPMailer',
+		// 	'Host'=>"smtp.gmail.com",
+		// 	'Username'=>'arf.sendmailer@gmail.com',
+		// 	'Password'=>'sendmailer',
+		// 	'Mailer'=>'smtp',
+		// 	 'Port'=>587,
+  //           'SMTPAuth'=>true,
+  //           'SMTPSecure' => 'tls'
+		// 	),
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
