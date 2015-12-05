@@ -115,11 +115,28 @@ class TransaksiRegistrasiController extends Controller
 				$model_user->VAS='-';
 				$model_user->STATUS=0;
 				$model_user->save(false);
+				
+				$from = 'arf.sendmailer@gmail.com';
+				$subject = "Konfirmasi Registrasi Soniq";
+				$message = "<h1> Hello, ".$model->NAMA_LENGKAP."</h1><br> Virtual ID anda : <b>".$model->VAD."</b> <br> Password anda : <b>".$pass."</b>";
+				$to = $model->EMAIL;
 
+				$mail=Yii::app()->Smtpmail;
+				$mail->SetFrom('$from', 'Admin Soniq');
+				$mail->Subject    = $subject;
+				$mail->MsgHTML($message);
+				$mail->AddAddress($to, "");
+				// $mail->Send();
+				if(!$mail->Send()) {
+					$res = "Email Gagal Dikirim";
+				}else {
+					$res = "Email Sudah Dikirm";
+				}
 				Yii::app()->user->setFlash('Virtual ID',$model->VAD);
 				Yii::app()->user->setFlash('Password',$pass);
 				Yii::app()->user->setFlash('Email',$model->EMAIL);
-				$data = array('vad'=>$model->VAD,'pwd'=>$model_user->PASSWORD,'email'=>$model->EMAIL);
+				Yii::app()->user->setFlash('Status',$res);
+				// $data = array('vad'=>$model->VAD,'pwd'=>$model_user->PASSWORD,'email'=>$model->EMAIL);
 				$this->redirect(array('confirm'));
 			}
 		}

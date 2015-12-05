@@ -16,7 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-	),
+		),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -26,9 +26,9 @@ return array(
 			'password'=>'123',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-		),
+			),
 		
-	),
+		),
 
 	// application components
 	'components'=>array(
@@ -36,18 +36,28 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-		),
+			),
 
 		// uncomment the following to enable URLs in path-format
-		
+		'Smtpmail'=>array(
+			'class'=>'application.extensions.smtpmail.PHPMailer',
+			'Host'=>"smtp.gmail.com",
+			'Username'=>'arf.sendmailer@gmail.com',
+			'Password'=>'sendmailer',
+			'Mailer'=>'smtp',
+			 'Port'=>587,
+            'SMTPAuth'=>true,
+            'SMTPSecure' => 'tls'
+			),
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				),
 			),
-		),
 		
 
 		// database settings are configured in database.php
@@ -56,7 +66,7 @@ return array(
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
-		),
+			),
 
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -64,7 +74,7 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
-				),
+					),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
@@ -72,17 +82,17 @@ return array(
 				),
 				*/
 			),
-		),
+			),
 
-	),
+		),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
+'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+	'adminEmail'=>'webmaster@example.com',
 	),
 
-	'defaultController'=>'Site/',
+'defaultController'=>'Site/',
 
 );
