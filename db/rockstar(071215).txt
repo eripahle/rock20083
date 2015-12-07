@@ -1,0 +1,16 @@
+1. penambahan table (transaksi_request_pembelian)
+a. ID_USERS
+b. ID_GALLERY_BARANG
+c. TANGGAL
+d. STATUS
+e. TYPE_PEMBELIAN (1/2 - By POINT/By CASH)
+
+2. penambahan table legend 
+a. ID_LEGEND
+b. NAMA_LEGEND
+
+3. tambah field di table users
+a. foto
+b. point
+c. point bonus
+d. status_first_login
