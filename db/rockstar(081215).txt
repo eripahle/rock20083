@@ -1,0 +1,17 @@
+1. table transaksi_request_topup_point
+- ID transaksi
+- ID user
+- tanggal querry
+- point yang di inginkan
+- status
+
+2. pada table transaksi_request_pembelian
+- nambah table ID_transaksi_request_pembelian AUtoIncrmnt
+- nambah VID untuk transaksinya
+
+3. table transaksi_give_point
+- ID transaksi
+- ID user pengirim
+- ID user penerima
+- status
+- point
