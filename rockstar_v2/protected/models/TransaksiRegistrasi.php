@@ -50,7 +50,7 @@ class TransaksiRegistrasi extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('verifyCode', 'captcha', 'allowEmpty'=>(!Yii::app()->user->getIsGuest() && extension_loaded('gd'))),
-			array('NAMA_LENGKAP, TEMPAT, TANGGAL, EMAIL', 'required'),
+			array('NAMA_LENGKAP, TEMPAT, TANGGAL, EMAIL, CORP', 'required'),
 			array('ID_FANBASE', 'length', 'max'=>20),
 			array('NAMA_LENGKAP', 'length', 'max'=>50),
 			array('TEMPAT, EMAIL, TWITTER, NAMA_IBU, NAMA_AYAH, CORP', 'length', 'max'=>30),

@@ -18,13 +18,17 @@
 						<div>
 							<?php foreach ($gallery as $g) {?>
 							<div style="border:1px solid #ccc;padding:10px;overflow:auto;float:left;width:30%;margin-right:2%;height:auto;margin-bottom: 2%;"> 
-								<?echo CHtml::link(CHtml::encode('Delete image'), array('GalleryBarang/delete', 'id'=>$g->ID_GALLERY_BARANG),
+								<?php if(Yii::app()->user->getState('role') == 2){
+								echo CHtml::link(CHtml::encode('Delete image'), array('GalleryBarang/delete', 'id'=>$g->ID_GALLERY_BARANG),
 									array(
 										'submit'=>array('GalleryBarang/delete', 'id'=>$g->ID_GALLERY_BARANG),
 										'class' => 'delete','confirm'=>'This will remove the image. Are you sure?'
 										));
+								}
 										?>
 										<div style="">
+										<a href="#" class="btn btn-primary"> Point </a>
+										<a href="#" class="btn btn-primary"> Cash </a>
 										<h3><?php echo $g->NAMA_GALLERY?> - Jenis <?php echo $g->JENIS_GALLERY?> </h3>
 											<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/berita/'.$g->SAMPEL_GALLERY,"image",array("width"=>150)); ?>
 										</div>

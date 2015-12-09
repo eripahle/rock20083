@@ -17,6 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		),
+	
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -37,6 +38,9 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 			),
+		'session' => array (
+		'autoStart' => true,
+		),
 
 		// uncomment the following to enable URLs in path-format
 		// 'Smtpmail'=>array(
@@ -52,7 +56,9 @@ return array(
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
+				''=>'site/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

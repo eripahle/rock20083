@@ -1,1 +1,1 @@
-<?php $this->renderPartial('_form', array('model'=>$model,'update'=>0)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model,'update'=>0,'model_legend'=>$model_legend,)); ?>

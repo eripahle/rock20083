@@ -29,6 +29,9 @@
  */
 class Users extends CActiveRecord
 {
+	public $old_password;
+	public $new_password;
+	public $repeat_password;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -45,17 +48,27 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('old_password, new_password, repeat_password', 'required', 'on' => 'changePwd'),
+			array('old_password', 'findPasswords', 'on' => 'changePwd'),
+			array('repeat_password', 'compare', 'compareAttribute'=>'new_password', 'on'=>'changePwd'),
 			array('PASSWORD', 'required'),
 			array('PASSWORD', 'length', 'max'=>50),
-			array('NOMER_SAKTI ', 'required','message'=>'Data {attribute} Harus Diisi'),
+			array('NOMER_SAKTI', 'required','message'=>'Data {attribute} Harus Diisi'),
 			array('NOMER_SAKTI','unique','message'=>'NOMER_SAKTI "<b>{value}</b>" Sudah Digunakan'),
 			array('NOMER_SAKTI, VAS', 'length', 'max'=>16),
 			array('STATUS', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('ID_USERS, ID_REGISTRASI, ID_FANBASE, ID_JENIS, PASSWORD, NOMER_SAKTI, VAS, STATUS', 'safe', 'on'=>'search'),
-		);
+			);
 	}
+
+	 public function findPasswords($attribute, $params)
+    {
+        $user = Users::model()->findByPk(Yii::app()->user->getId());
+        if ($user->PASSWORD != md5($this->old_password))
+            $this->addError($attribute, 'Password Lama Salah');
+    }
 
 	/**
 	 * @return array relational rules.
@@ -77,7 +90,7 @@ class Users extends CActiveRecord
 			'temen1' => array(self::HAS_MANY, 'Teman', 'ID_USERS'),
 			'iDREGISTRASI' => array(self::BELONGS_TO, 'TransaksiRegistrasi', 'ID_REGISTRASI'),
 			'iDJENIS' => array(self::BELONGS_TO, 'JenisUser', 'ID_JENIS'),
-		);
+			);
 	}
 
 	/**
@@ -94,18 +107,18 @@ class Users extends CActiveRecord
 			'NOMER_SAKTI' => 'Nomer Sakti',
 			'VAS' => 'Vas',
 			'STATUS' => 'Status',
-		);
+			);
 	}
-	 public function validatePassword($password)
-    {
-    	$hash= CPasswordHelper::hashPassword($this->PASSWORD);
-        return CPasswordHelper::verifyPassword(md5($password),$hash);
-    }
- 
-    public function hashPassword($password)
-    {
-        return CPasswordHelper::hashPassword($password);
-    }
+	public function validatePassword($password)
+	{
+		$hash= CPasswordHelper::hashPassword($this->PASSWORD);
+		return CPasswordHelper::verifyPassword(md5($password),$hash);
+	}
+
+	public function hashPassword($password)
+	{
+		return CPasswordHelper::hashPassword($password);
+	}
 
 	public function generateSalt() { 
 		return uniqid('',true); 
@@ -139,7 +152,7 @@ class Users extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-		));
+			));
 	}
 
 	/**

@@ -78,6 +78,8 @@ class TransaksiRegistrasiController extends Controller
 	{
 		$model=new TransaksiRegistrasi;
 		$model_user=new Users;
+
+		$model_legend=new Legend;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model,$model_user);
 		
@@ -108,7 +110,7 @@ class TransaksiRegistrasiController extends Controller
 				$model->save(false);
 
 				$pass = $this->randomPassword(6);
-				$model_user->PASSWORD= md5($pass);
+				// $model_user->PASSWORD= md5($pass);
 				$model_user->ID_FANBASE = $model->ID_FANBASE;
 				$model_user->ID_REGISTRASI= $model->ID_REGISTRASI;
 				$model_user->ID_JENIS=4;
@@ -136,28 +138,15 @@ class TransaksiRegistrasiController extends Controller
 				//Attach an image file
 				//$mail->addAttachment('images/phpmailer_mini.png');
 				//send the message, check for errors
-				if (!$mail->send()) {
-					$res = "Email Gagal Dikirim";
-				}else {
-					$res = "Email Sudah Dikirm";
-				}
 
-				// $from = 'arf.sendmailer@gmail.com';
-				// $subject = "Konfirmasi Registrasi Soniq";
-				// $message = "<h1> Hello, ".$model->NAMA_LENGKAP."</h1><br> Virtual ID anda : <b>".$model->VAD."</b> <br> Password anda : <b>".$pass."</b>";
-				// $to = $model->EMAIL;
-
-				// $mail=Yii::app()->Smtpmail;
-				// $mail->SetFrom('$from', 'Admin Soniq');
-				// $mail->Subject    = $subject;
-				// $mail->MsgHTML($message);
-				// $mail->AddAddress($to, "");
-				// // $mail->Send();
-				// if(!$mail->Send()) {
+				// if (!$mail->send()) {
 				// 	$res = "Email Gagal Dikirim";
 				// }else {
 				// 	$res = "Email Sudah Dikirm";
 				// }
+				$res ='s';
+
+				
 				Yii::app()->user->setFlash('Virtual ID',$model->VAD);
 				Yii::app()->user->setFlash('Password',$pass);
 				Yii::app()->user->setFlash('Email',$model->EMAIL);
@@ -168,7 +157,7 @@ class TransaksiRegistrasiController extends Controller
 		}
 
 		$this->render('create',array(
-			'model'=>$model,'model_user'=>$model_user,
+			'model'=>$model,'model_user'=>$model_user,'model_legend'=>$model_legend,
 			));
 	}
 	public function actionConfirm(){

@@ -40,7 +40,7 @@
 					'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Registrasi', 
-					'url'=>array('/transaksiregistrasi/create'),
+					'url'=>array('/registrasi'),
 					'visible'=>Yii::app()->user->isGuest),
 				array(
 					'label'=>'Timeline', 
@@ -72,7 +72,12 @@
 				array(
 					'label'=>'View Gallery FanPage', 
 					'url'=>array('/gallerybarang/index'), 
-				 	'visible'=>Yii::app()->user->getState('role') == 2),
+				 	'visible'=>!Yii::app()->user->isGuest),
+					// 'visible'=>!Yii::app()->user->isGuest),
+				array(
+					'label'=>'Ganti Password', 
+					'url'=>array('/profile/changepass'), 
+				 	'visible'=>!Yii::app()->user->isGuest),
 					// 'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Logout ('.Yii::app()->user->name.')', 

@@ -109,12 +109,28 @@ class SiteController extends Controller
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
+        	
+			// echo $a."s"; die();	
 			$model->attributes=$_POST['LoginForm'];
+
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
+			if($model->validate()){
+				if($model->login()){
+					$idUsr = Yii::app()->user->getId();
+				$criteria = new CDbCriteria();
+				$profile = TransaksiRegistrasi::model()->get_data_profile($idUsr);
+				if( $profile[0]['STATUS_FIRST_LOGIN']==0){
+					$this->redirect(Yii::app()->user->returnUrl.'profile/changePass');
+				}else{
+					$this->redirect(Yii::app()->user->returnUrl.'timeline');
+				}
+			}
+				
+				
 		}
+	}
 		// display the login form
+
 		$this->render('login',array('model'=>$model));
 	}
 

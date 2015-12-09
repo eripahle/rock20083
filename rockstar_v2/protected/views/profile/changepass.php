@@ -16,9 +16,9 @@
 	<!-- right content column-->
 	<div class="col-md-7" >
 		<div class="panel" style="min-width=500px;">
-			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">LOGIN</div>   
+			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">GANTI PASSWORD</div>   
 			<div class="panel-body">
-			<br>
+				<br>
 				<div class="row">
 					<div class="col-sm-offset-3 col-sm-5" style="border: 1px solid #ccc;">
 						<div class="form">
@@ -29,42 +29,37 @@
 									'validateOnSubmit'=>true,
 									),
 									)); ?>
-									<div class="row">
-										<?php echo $form->labelEx($model,'nomor_sakti'); ?>
-										<?php echo $form->textField($model,'nomor_sakti',array('style' => 'width: 220px; border-radius: 0px;','class'=>'form-control')); ?>
-										<?php echo $form->error($model,'nomor_sakti'); ?>
-									</div>
+									<div class="row"> <?php echo $form->labelEx($model,'old_password'); ?> 
+									<?php echo $form->passwordField($model,'old_password'); ?> 
+									<?php echo $form->error($model,'old_password'); ?> </div>
 
-									<div class="row">
-										<?php echo $form->labelEx($model,'password'); ?>
-										<?php echo $form->passwordField($model,'password',array('style' => 'width: 220px; border-radius: 0px;','class'=>'form-control')); ?>
-										<?php echo $form->error($model,'password'); ?>
-									</div>
+									<div class="row"> <?php echo $form->labelEx($model,'new_password'); ?> 
+									<?php echo $form->passwordField($model,'new_password'); ?> 
+									<?php echo $form->error($model,'new_password'); ?> </div>
 
-									<div class="row rememberMe">
-										<?php echo $form->checkBox($model,'rememberMe'); ?>
-										<?php echo $form->label($model,'rememberMe'); ?>
-										<?php echo $form->error($model,'rememberMe'); ?>
-									</div>
+									<div class="row"> <?php echo $form->labelEx($model,'repeat_password'); ?> 
+									<?php echo $form->passwordField($model,'repeat_password'); ?> 
+									<?php echo $form->error($model,'repeat_password'); ?> </div>
 
 									<div class="row buttons">
-										<?php echo CHtml::submitButton('Login'); ?>
+										<?php echo CHtml::submitButton('Ganti Password'); ?>
 									</div>
 
 									<?php $this->endWidget(); ?>
 								</div><!-- form -->
+
 							</div>
 						</div><!--/panel-body-->
 					</div><!--/panel-->
 					<!--/end right column-->
 					<Br>
-				</div> 
-			</div>
+					</div> 
+				</div>
 
-			<?php $this->renderpartial('../layouts/side-social-feed');  ?>
-		</div>
-		<!-- </div> -->
-		<!-- </div> -->
+				<?php $this->renderpartial('../layouts/side-social-feed');  ?>
+			</div>
+			<!-- </div> -->
+			<!-- </div> -->
 
 
 

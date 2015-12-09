@@ -14,10 +14,10 @@
 	
 	<!-- right content column-->
 
-	<?php 
-	$name = "Jennifer Doe Jennifer Doe II";
+	<?php  foreach ($data as $data) {
+	$name = CHtml::encode($data['NAMA_LENGKAP']);
 	$badges = 9;
-	$points = 120;
+	$points =CHtml::encode($data['POINT']);
 	$imageurl = "/media/b20.jpg";
 	?>    					
 	<div class="col-md-12">
@@ -58,7 +58,7 @@
 
 	<div class="col-md-8" >
 		<div class="panel" style="min-width=500px;">
-		<?php foreach ($data as $data) {?>
+		
 			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">PROFILE <?php echo CHtml::encode($data['NAMA_LENGKAP']); ?></div>   
 			<div class="panel-body">
 				<div class="row">

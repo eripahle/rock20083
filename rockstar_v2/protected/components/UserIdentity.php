@@ -18,7 +18,6 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-
 		$username=strtolower($this->username);
 		$user=Users::model()->find('LOWER(NOMER_SAKTI)=?',array($username));
 		if($user===null)
@@ -30,7 +29,7 @@ class UserIdentity extends CUserIdentity
         else
         {
             $this->_id=$user->ID_USERS;
-            $this->username=$user->NOMER_SAKTI;
+            $this->username=$user->NOMER_SAKTI;;
             $this->setState('role', $user->ID_JENIS);
             $this->errorCode=self::ERROR_NONE;
         }
