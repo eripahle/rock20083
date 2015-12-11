@@ -94,7 +94,24 @@ class Komentar extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public function get_data_komentar($id)
+        {            
+           $sql = "SELECT 
+           users.ID_USERS,
+           users.ID_REGISTRASI,
+           transaksi_registrasi.NAMA_LENGKAP,
+           komentar.KOMENTAR,
+           komentar.DATETIME_KOMENTAR 
+            FROM users,transaksi_registrasi,komentar 
+            WHERE komentar.ID_USERS = users.ID_USERS 
+            AND users.ID_REGISTRASI = transaksi_registrasi.ID_REGISTRASI 
+            AND komentar.ID_STATUS_USERS = $id 
+            ORDER BY komentar.ID_KOMENTAR ASC";
+    $data = Yii::app()->db
+        ->createCommand($sql)
+        ->queryAll();
+    return $data;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

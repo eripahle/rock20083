@@ -143,14 +143,14 @@ class TimelineController extends Controller
 			$model->ID_USERS = Yii::app()->user->getId();
 			$model->KONTEN = $_POST['StatusUsers']['KONTEN'];
 			if($model->save())
-				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
+				$this->redirect(Yii::app()->user->returnUrl.'timeline');
 		}
 		if(isset($_POST['idstat'])){
 			$komen->ID_STATUS_USERS = $_POST['idstat'];
 			$komen->ID_USERS = $id;
 			$komen->KOMENTAR = $_POST['komen'];
 			if($komen->save())
-				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
+				$this->redirect(Yii::app()->user->returnUrl.'timeline');
 		}
 
 		$this->render('index',array('model'=>$model,'status'=>$status,

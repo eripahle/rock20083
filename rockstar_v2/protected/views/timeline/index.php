@@ -75,10 +75,24 @@
 							<a href="#"> Like </a>
 						</div>
 						<div>
-						<?php $komen=Komentar::model()->findByPk($stat['ID_STATUS_USERS']); 
-						print_r($komen);
-					?>
+						<hr>
+						<div class="row-fluid">
+						<?php 	
+						$criteria = new CDbCriteria();
+						$komen = Komentar::model()->get_data_komentar($stat['ID_STATUS_USERS']);
+						?>
 						
+						<div class="col-sm-12" style="solid #ccc;">
+						<h4> KOMENTAR (<?php echo count($komen);?>)</h4>
+						<?php
+						$i=0;
+						foreach ($komen as $k) {?>
+							<b> <?php echo $k['NAMA_LENGKAP']?> : </b><br>
+							<?php echo $k['KOMENTAR']?><hr>
+						<?php $i++;} ?>
+						</div>
+						</div>
+							
 						
 							<form method="POST">
 								<div class="col-md-11">

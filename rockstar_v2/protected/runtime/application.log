@@ -19114,3 +19114,74 @@ REQUEST_URI=/_rockstar/rockstar_v2/timeline
 in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\views\timeline\index.php (80)
 in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php (157)
 in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/11 06:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/berita/9283-DSC_0199.JPG".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/berita/9...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/images/berita/9283-DSC_0199.JPG
+HTTP_REFERER=http://localhost/_rockstar/rockstar_v2/gallerybarang/index
+---
+2015/12/11 06:29:02 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\_rockstar\rockstar_v2\protected\views\timeline\index.php:83)
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(869): TimelineController->renderFile()
+#1 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(782): TimelineController->renderPartial()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php(157): TimelineController->render()
+#3 C:\xampp\htdocs\_rockstar\yii\framework\web\actions\CInlineAction.php(49): TimelineController->actionIndex()
+#4 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(133): TimelineController->runAction()
+#6 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CInlineFilter.php(58): TimelineController->filterAccessControl()
+#9 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(265): TimelineController->runActionWithFilters()
+#12 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(282): TimelineController->run()
+#13 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CWebApplication->run()
+REQUEST_URI=/_rockstar/rockstar_v2/timeline
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\views\timeline\index.php (83)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php (157)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/11 06:29:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/11 06:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/11 06:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/11 06:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/11 06:31:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
