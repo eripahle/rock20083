@@ -1,36 +1,3 @@
-<?php
-/* @var $this TransaksiRegistrasiController */
-/* @var $model TransaksiRegistrasi */
-/* @var $form CActiveForm */
-?>
-<!-- <header>
-    <div class="col-md-12">
-      <div class="col-md-10"></div>
-      <div class="col-md-2"><br />        
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/site/login"><button class="btn btn-block btn-lg btn-warning">Login Here</button></a>    
-      </div>
-    </div>
-</header> -->
-
-<!-- Begin Body -->
-<div style="min-width:500px;">
-	<!-- <div class="row"> -->
-	<!-- left side column -->
-	<!--mid column-->
-	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
-	<!-- right content column-->
-	<div class="col-md-7" >
-		<div class="panel" style="min-width=500px;">
-			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">
-				<?php if($update!=1){?>
-				REGISTRASI
-				<?php }else{ ?>
-				EDIT DATA <?php echo $model->NAMA_LENGKAP ?>
-				<?php } ?>
-			</div>   
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-sm-offset-1 col-sm-10">
 						<div class="form">
 							<?php $form=$this->beginWidget('CActiveForm', array(
 								'id'=>'registrasi-form',
@@ -136,37 +103,14 @@
 											<?php echo $form->textField($model,'NAMA_AYAH',array('size'=>30,'maxlength'=>30)); ?>
 											<?php echo $form->error($model,'NAMA_AYAH'); ?>
 										</div>
-										<?php if($update!=1){ ?>
-										<div class="row">
-											<?php echo $form->labelEx($model,'NO_SAKTI'); ?>
-											<?php echo $form->textField($model,'NO_SAKTI',array('size'=>16,'maxlength'=>16)); ?>
-											<?php echo $form->error($model,'NO_SAKTI'); ?>
-											<div class="hint">*Kosongkan Bila Tidak Ada</div> 
-										</div>
 
 										<!-- <div class="row">
 											<?php echo $form->labelEx($model,'CORP'); ?>
 											<?php echo $form->textField($model,'CORP',array('size'=>30,'maxlength'=>30)); ?>
 											<?php echo $form->error($model,'CORP'); ?>
 										</div> -->
-										<?
-									echo $form->label($model,'CORP');
-									$cityOptions = CHtml::listData(Legend::model()->findAll(),'nama_legend','nama_legend');
-									echo $form->dropDownList($model, 'CORP', $cityOptions, array('prompt' => '-- Pilih Lokasi Anda --'));?>
-										<?php 
 										
-											if(extension_loaded('gd')): ?> 
-											<div class="row"> 
-												<?php echo CHtml::activeLabelEx($model, 'verifyCode') ?> 
-												<div> 
-													<?php $this->widget('CCaptcha'); ?><br/> 
-													<?php echo CHtml::activeTextField($model,'verifyCode'); ?> 
-												</div> 
-												<div class="hint">
-													Ketik tulisan yang ada pada gambar . <br/>Tulisan tidak case sensitive
-												</div> 
-											</div> 
-										<?php endif; }?>
+										
 
 									</fieldset>
 									<div class="row buttons">
@@ -176,15 +120,4 @@
 									<?php $this->endWidget(); ?>
 
 								</div><!-- form -->
-							</div>
-						</div><!--/panel-body-->
-					</div><!--/panel-->
-					<!--/end right column-->
-					<Br>
-					</div> 
-				</div>
-
-				<?php $this->renderpartial('../layouts/side-social-feed');  ?>
-			</div>
-			<!-- </div> -->
-			<!-- </div> -->
+							

@@ -27,8 +27,21 @@
 								}
 										?>
 										<div style="">
-										<a href="#" class="btn btn-primary"> Point </a>
-										<a href="#" class="btn btn-primary"> Cash </a>
+										<?php  
+										echo CHtml::link(CHtml::encode('Point'), 
+											array('Produk/BuyByPoint', 'id'=>$g->ID_GALLERY_BARANG),
+											array(
+												'submit'=>array('Produk/BuyByPoint', 'id'=>$g->ID_GALLERY_BARANG),
+										'class' => 'btn btn-primary','confirm'=>'Apakah Kamu Yakin Membeli Produk Ini?'
+										));?>
+										<?php  
+										echo CHtml::link(CHtml::encode('Cash'), 
+											array('Produk/Buybycash', 'id'=>$g->ID_GALLERY_BARANG),
+											array(
+												'submit'=>array('Produk/Buybycash', 'id'=>$g->ID_GALLERY_BARANG),
+										'class' => 'btn btn-primary','confirm'=>'Apakah Kamu Yakin Membeli Produk Ini?'
+										));?>
+										
 										<h3><?php echo $g->NAMA_GALLERY?> - Jenis <?php echo $g->JENIS_GALLERY?> </h3>
 											<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/berita/'.$g->SAMPEL_GALLERY,"image",array("width"=>150)); ?>
 										</div>

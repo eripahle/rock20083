@@ -113,6 +113,19 @@ class GalleryBarang extends CActiveRecord
 		));
 	}
 
+	public function get_data_barang($id)
+        {            
+           $sql = "SELECT * 
+            FROM gallery_barang,transaksi_request_pembelian
+            WHERE transaksi_request_pembelian.ID_USERS = $id 
+            AND transaksi_request_pembelian.STATUS = 1
+            AND gallery_barang.ID_GALLERY_BARANG = transaksi_request_pembelian.ID_GALLERY_BARANG";
+    // $sql = "SELECT * FROM STATUS";
+    $data = Yii::app()->db
+        ->createCommand($sql)
+        ->queryAll();
+    return $data;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

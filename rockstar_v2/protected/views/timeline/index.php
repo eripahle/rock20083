@@ -75,9 +75,15 @@
 							<a href="#"> Like </a>
 						</div>
 						<div>
-							<form>
+						<?php $komen=Komentar::model()->findByPk($stat['ID_STATUS_USERS']); 
+						print_r($komen);
+					?>
+						
+						
+							<form method="POST">
 								<div class="col-md-11">
-									<textarea style="width:100%; resize:none" placeholder="Add a Comment"></textarea>
+									<textarea style="width:100%; resize:none" name="komen" placeholder="Add a Comment"></textarea>
+									<input type="hidden" name="idstat" value="<?php echo $stat['ID_STATUS_USERS'] ?>">
 								</div>
 								<div class="col-md-1">
 									<input type="submit" value="Add" style="float:right; width:47px; height:47px;">

@@ -121,21 +121,20 @@ class TimelineController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{	
+		$id = Yii::app()->user->getId();
+		if(empty($id)){
+			$this->redirect(Yii::app()->user->returnUrl.'site/login');
+		}
+
 		$criteria = new CDbCriteria();
 		$model = new StatusUsers;
 		$user = new Users;
+		$komen = new Komentar;
 		// $criteria->limit = 1;
 		$criteria->order= 'ID_STATUS_USERS DESC';
 		// $status = Status::model()->findAll($criteria);
 		$status = $model->get_all_data();
-		// print_r($status); die();
-		// foreach ($data as $d) {
-		// 	echo $data->USERNAME;
-		// }
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['StatusUsers']))
 		{
 			// $model->attributes=$_POST['Status'];
@@ -144,6 +143,13 @@ class TimelineController extends Controller
 			$model->ID_USERS = Yii::app()->user->getId();
 			$model->KONTEN = $_POST['StatusUsers']['KONTEN'];
 			if($model->save())
+				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
+		}
+		if(isset($_POST['idstat'])){
+			$komen->ID_STATUS_USERS = $_POST['idstat'];
+			$komen->ID_USERS = $id;
+			$komen->KOMENTAR = $_POST['komen'];
+			if($komen->save())
 				$this->redirect(Yii::app()->user->returnUrl.'/timeline');
 		}
 

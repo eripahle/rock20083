@@ -1,5 +1,11 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
+<?php
+$id = Yii::app()->user->getId();
+if(empty($id)){
+   // $this->redirect(Yii::app()->request->baseUrl.'/site/login');
+}
+?>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -48,7 +54,7 @@
 					'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Profile', 
-					'url'=>array('/transaksiregistrasi/profile'), 
+					'url'=>array('/profile'), 
 					'visible'=>!Yii::app()->user->isGuest),
 					// 'visible'=>!Yii::app()->user->isGuest),
 				array(
@@ -67,17 +73,21 @@
 				array(
 					'label'=>'Create Gallery Barang', 
 					'url'=>array('/gallerybarang/create'), 
-				 	'visible'=>Yii::app()->user->getState('role') == 2),
+					'visible'=>Yii::app()->user->getState('role') == 2),
 					// 'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'View Gallery FanPage', 
 					'url'=>array('/gallerybarang/index'), 
-				 	'visible'=>!Yii::app()->user->isGuest),
+					'visible'=>!Yii::app()->user->isGuest),
 					// 'visible'=>!Yii::app()->user->isGuest),
+				array(
+					'label'=>'Top Up Point', 
+					'url'=>array('/point/topup'), 
+					'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Ganti Password', 
 					'url'=>array('/profile/changepass'), 
-				 	'visible'=>!Yii::app()->user->isGuest),
+					'visible'=>!Yii::app()->user->isGuest),
 					// 'visible'=>!Yii::app()->user->isGuest),
 				array(
 					'label'=>'Logout ('.Yii::app()->user->name.')', 
@@ -93,9 +103,14 @@
 			<div class="clear"></div>
 
 			<div id="footer">
-				<script type="text/javascript" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.3.min.js"></script>
+				<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.3.min.js"></script>
 				<script>
 					$(document).ready(function(){
+
+						$("#TransaksiRequestTopupPoint_POINT").keyup(function(){
+							$("#TransaksiRequestTopupPoint_biaya").val( $("#TransaksiRequestTopupPoint_POINT").val()*1000);
+						});
+
 						var len = 8;
 						var pass;
 						$('#Users_PASSWORD').val(randomPassword(len));
@@ -104,14 +119,17 @@
 							$('#Users_PASSWORD').val(randomPassword(len));
 						});
 						function randomPassword(length) {
-						var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890";
-						var pass = "";
-						for (var x = 0; x < length; x++) {
-							var i = Math.floor(Math.random() * chars.length);
-							pass += chars.charAt(i);
+							var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP1234567890";
+							var pass = "";
+							for (var x = 0; x < length; x++) {
+								var i = Math.floor(Math.random() * chars.length);
+								pass += chars.charAt(i);
+							}
+							return pass;
 						}
-						return pass;
-					}
+
+						
+
 					});
 					
 				</script>
