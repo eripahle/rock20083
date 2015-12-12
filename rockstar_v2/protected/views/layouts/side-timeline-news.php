@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-xs-12 col-md-3">
 	<div class="panel" style="min-width:160px;">
         <div class="panel-heading text-center" style="background-color:#555;color:#eee;">NEWS</div> 
             <div class="panel-body" >

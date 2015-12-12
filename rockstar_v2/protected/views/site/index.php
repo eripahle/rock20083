@@ -8,14 +8,14 @@
 </header> -->
 
 <!-- Begin Body -->
-<div style="min-width:500px;">
+
   <!-- <div class="row"> -->
           <!-- left side column -->
          <!--mid column-->
           <?php $this->renderpartial('../layouts/side-komunitas');  ?>
           <!-- right content column-->
           <div class="col-md-7">
-              <div class="panel" style="min-width=500px;">
+              <div class="panel" style="width:100%">
                 <div class="panel-heading text-center" style="background-color:#111;color:#fff;">GALLERY ROCKSTAR</div>   
                 <div class="panel-body">
                   

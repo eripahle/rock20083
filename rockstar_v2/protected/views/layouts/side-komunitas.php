@@ -37,7 +37,7 @@
                   <div class="text-center m-b clearfix ">
                       <div class="thumb-lg avatar m-t-n-xxl">
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" alt="..." style="width:100%;">
-                        <div class="h4"><center><b>Hayku</b></center></div>                
+                        <div class="h4"><center><b>HayfaQu</b></center></div>                
                       </div>
                   
                       <div class="hbox text-center b-t b-light ">          

@@ -30,10 +30,9 @@ if(empty($id)){
 
 <body style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/media/3.jpg');">
 
-	<div class="container">
+	
+	<div style="margin-left:5%; margin-right:5%;">
 		<div class="featured-image" style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/media/a1.png')"></div>
-	</div>
-	<div class="container">
 	<!-- <div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div> --><!-- header -->
@@ -96,9 +95,11 @@ if(empty($id)){
 				),
 				)); ?>
 			</div><!-- mainmenu -->
-			<div class="container">
+			
+			<div style="width:106%; margin-left:-3%">
 				<?php  echo $content;   ?>
 			</div>
+			
 
 			<div class="clear"></div>
 
