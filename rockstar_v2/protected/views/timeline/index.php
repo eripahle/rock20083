@@ -8,19 +8,21 @@
 	$rating = "/media/rating.png";
 ?>    					
 	<div class=" col-xs-12 col-md-2">
-		<div class="panel" style="min-width:160px; background-color:whitesmoke">
+		<div class="panel" style="min-width:160px; background-color:white">
 	        <div class="panel-heading text-center" style="background-color:#555;color:#eee;">
 	        	<h4><?php echo $name; ?></h4>
 	        </div>
 	            <div class="panel-body text-center" >	           		
-    				<div class=" col-xs-12  col-md-12">   				
-    					<img class="image-responsive" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="width:100%; margin-left:2%; margin-right:2%;">                   				
-    				</div>	
     		   		<div class=" col-xs-12 col-md-12">
-    		   			<center><img src="<?php echo Yii::app()->request->baseUrl.$rating; ?>" style="width:90%; max-width:350px; margin-left:5%; margin-right:5%; margin-top:5%"></center>
+    		   			<center><img src="<?php echo Yii::app()->request->baseUrl.$rating; ?>" style="width:80%; max-width:350px; margin-left:10%; margin-right:10%; margin-top:5%"></center>
     		   			<hr>
     		   		</div>
+    				<div class=" col-xs-12  col-md-12">   			
+    					<img class="image-responsive" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="width:100%; margin-left:2%; margin-right:2%;">                   				
+    					<br />
+    				</div>	
     		   		<div class=" col-xs-12 col-md-12">
+    		   			<br>
     		   			<div class=" col-xs-6 col-md-6"> 
 	    					<img src="<?php echo Yii::app()->request->baseUrl; ?>/media/coin.png" style="width:99%; max-width:120px; "> 
 	    					 	<br/>
@@ -53,7 +55,7 @@
     					</div>	<hr>
 						<?php 
 						foreach ($status as $stat) {?>
-						<div class"container" style="overflow:auto; border: 1px solid #ccc;margin-bottom:2%; margin-left:5%; padding-bottom: 5px; width:90%; background:whitesmoke;"> 
+						<div style="overflow:auto; border: 1px solid #ccc;margin-bottom:4%; margin-left:2%; width:96%; background:whitesmoke;"> 
 							<div class="col-md-12">
 								<?=  '<a href=""><h4><b>'.$stat['NAMA_LENGKAP'].'</b></a></h4><h6>
 								Shared at '.$stat['DATETIME_STATUS'].'</h6>' ?>
@@ -82,7 +84,7 @@
 									<div class="col-md-1"><br/></div>
 									<div class="col-md-11" style="margin-top:10px;">
 										<div class="col-md-12" style="background:whitesmoke; border:1px solid #ccc; padding-top:5px; padding-bottom:5px">									
-											<a> <?php echo $k['NAMA_LENGKAP']?></a>
+											<a><b> <?php echo $k['NAMA_LENGKAP']?></b></a>
 										</div>
 										<div class="col-md-12" style="border:1px solid #ccc; background:white; padding-top:5px; padding-bottom:5px">								
 											<?php echo $k['KOMENTAR']?>
@@ -94,11 +96,11 @@
 								<div class="col-md-1"><br/></div>
 								<form method="POST">								
 									<div class="col-md-10" style="margin-top:10px;">
-										<textarea style="width:100%; resize:none" name="komen" placeholder="  Add a Comment"></textarea>
+										<textarea style="width:98%; resize:none" name="komen" placeholder="  add comment"></textarea>
 										<input type="hidden" name="idstat" value="<?php echo $stat['ID_STATUS_USERS'] ?>">
 									</div>
 									<div class="col-md-1" style="margin-top:10px;">
-										<input type="submit" value="Add" style="float:right; width:46px; height:46px;">
+										<input type="submit" class="btn btn-default" value="send" style="float:right; width:54px; height:46px;">
 									</div>									
 								</form>	
 
@@ -109,7 +111,9 @@
 			</div><!--/panel-->					
 		</div> 
 	</div>
-	<?php $this->renderpartial('../layouts/side-timeline-news');  ?>
+	<div class="col-xs-12 col-md-3">
+		<?php $this->renderpartial('../layouts/side-timeline-news');  ?>
+	</div>
 </Br>
 </div>
 </div>

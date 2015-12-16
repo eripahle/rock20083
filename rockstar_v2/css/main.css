@@ -49,7 +49,10 @@ body
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	/*background:white url(bgi.gif) repeat-x left top;*/
+	color: #58666e;
+	background-color: #f6f8f8;
+	border-bottom: 1px solid #dee5e7;
 }
 
 #mainmenu ul
@@ -65,7 +68,7 @@ body
 
 #mainmenu ul li a
 {
-	color:#ffffff;
+	color:#58666e;
 	background-color:transparent;
 	font-size:12px;
 	font-weight:bold;

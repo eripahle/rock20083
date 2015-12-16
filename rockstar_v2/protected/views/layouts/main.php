@@ -28,14 +28,12 @@ if(empty($id)){
 </head>
 
 
-<body style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/media/3.jpg');">
+<body style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/images/background.png'); font-family:Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif";>
 
 	
 	<div style="margin-left:5%; margin-right:5%;">
 		<div class="featured-image" style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/media/a1.png')"></div>
-	<!-- <div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div> --><!-- header -->
+	
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(

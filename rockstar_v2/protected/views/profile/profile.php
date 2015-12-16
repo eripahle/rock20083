@@ -26,7 +26,9 @@
 <div class="col-md-12">
 	<div class="col-md-6" >
 
-		<div class="col-md-12" style="border:2px solid #ccc; margin-bottom:4%; background:whitesmoke;">
+		<div class="panel-heading text-center" style="background-color:#111;color:#fff;">PROFILE</div>   		
+		<div class="col-md-12" style="border:2px solid #ccc; margin-bottom:4%; background:white;">
+			
 			<div>
 				<table>
 					<tr>
@@ -39,8 +41,8 @@
 					</tr>
 					<tr>
 						<td colspan="4">
-							<img src="<?php echo Yii::app()->request->baseUrl; ?>/media/rating.png" style="width:50%; margin-top:3%; margin-bottom:3%"/></h4>						
-						<br>
+							<img src="<?php echo Yii::app()->request->baseUrl; ?>/media/rating.png" style="width:50%; margin-bottom:5%"/></h4>						
+						<br><br>
 							<h4><?php echo $kota.", ".$provinsi;?></b></h4>
 						</td>
 					</tr>

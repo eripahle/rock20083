@@ -1,8 +1,10 @@
-<div class="col-xs-12 col-md-3">
-	<div class="panel" style="min-width:160px;">
-        <div class="panel-heading text-center" style="background-color:#555;color:#eee;">NEWS</div> 
-            <div class="panel-body" >
-            	
+
+	 <div class="panel" style="width:100%; border:2px solid #edf1f2;">
+                <div class="panel-heading" style="background-color:#f6f8f8; color">
+                	News
+                </div> 
+
+	<div class="panel-body" >            	
             		<div>
             			<table class="table" border=0 align="center"> 
 				            <style>
@@ -11,13 +13,13 @@
 				                    }
 				            </style> 
 				            <?php
-				            	$info = "lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet";
+				            	$info = "lorem ipsum sit amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet lorem ipsum sit dolor amet";
 				            ?>
 				            
 				            <tr>
 				                <td>
-				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%">				                
-				                	<h3><b>Lorem Ipsum 1</b><h3>
+				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%"><br/>				                
+				                	<h3 style="margin-top:25px; padding-top:10px;"><b>News 1</b><h3>
 				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>				                	 
 				                </td>						 
 						 	</tr>						 	
@@ -26,41 +28,14 @@
 				                <td>
 				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
 				                
-				                	<h3><b>Lorem Ipsum 2</b><h3>
+				                	<h3><b>News 2</b><h3>
 				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
 				                </td>						 
-						 	</tr>
-
-				            <tr>
-				                <td class="col-md-6">
-				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b6.jpg" style="width:100%;"></p>
-				               
-				                	<h3><b>Lorem Ipsum 3</b><h3>
-				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5> 
-				                </td>						 
-						 	</tr>
-
-				            <tr>
-				                <td class="col-md-6">
-				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/a5.jpg" style="width:100%;"></p>
-				               
-				                	<h3><b>Lorem Ipsum 4</b><h3>
-				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
-				                </td>						 
-						 	</tr>						 	
-
-				            <tr>
-				                <td class="col-md-6">
-				                	<p><img src ="<?php echo Yii::app()->request->baseUrl; ?>/media/b2.jpg" style="width:100%;"></p>
-				               
-				                	<h3><b>Lorem Ipsum 5</b><h3>
-				                	<h5><?php echo $info."..." ?><a href=""><i>Read More</i></a></p></h5>
-				                </td>						 
-						 	</tr>
+						 	</tr>			          
 
 				    	</table>
             		</div>
                 </div>
         </div>
     </div>
-</div>
+

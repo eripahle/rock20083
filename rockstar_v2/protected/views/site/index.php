@@ -1,83 +1,592 @@
 <!-- <header>
-    <div class="col-md-12">
-      <div class="col-md-10"></div>
-      <div class="col-md-2"><br />        
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/protected/views/site/login"><button class="btn btn-block btn-lg btn-warning">Login Here</button></a>    
-      </div>
-    </div>
 </header> -->
 
 <!-- Begin Body -->
 
   <!-- <div class="row"> -->
           <!-- left side column -->
-         <!--mid column-->
+         <div class="col-md-2" >
           <?php $this->renderpartial('../layouts/side-komunitas');  ?>
+        </div>
+         <!--mid column-->
           <!-- right content column-->
           <div class="col-md-7">
-              <div class="panel" style="width:100%">
-                <div class="panel-heading text-center" style="background-color:#111;color:#fff;">GALLERY ROCKSTAR</div>   
-                <div class="panel-body">
-                  
+              
+              <div class="panel" style="width:100%; border:1px solid #edf1f2; border-radius:3px 3px 3px 3px;">  
+                <div class="panel-body">                  
                   <div class="row">
                   <div class="col-sm-12">
-                    <h2>Lorem ipsum sit dolor</h2>
+                    <h2>Gallery Barang</h2>
                     Lorem ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet<br><br>
-                    <button class="btn btn-default">More</button><br /><br />
+                    <a class="">More</a><br /><br />
                   </div> 
-                   <?php foreach ($gallery as $g){?>
-                       <div class="col-sm-12">
-                    <hr>
-                   
-                     <div class="panel b-a " style="min-width:380px;">
-                                              
-                            <div class="col-sm-6">
-                      <?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/berita/'.$g->SAMPEL_GALLERY,"image",array("width"=>179)); ?>
-                              <!-- <img src="media/text.png" style="width:179px;">                                              -->
-                            </div>
-                        
-                            <div class="col-sm-6" style="height:179px; min-width:170px;">  
-                                <div class="col padder-v text-muted">
-                                  <div class="h4"><b><?php echo $g->NAMA_GALLERY?></b></center></div> 
-                                </div>        
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel" style="width:100%; border:1px solid #7266ba; border-radius:3px 3px 3px 3px;" >  
+                <div class="panel-body"> 
+                  <div class="row">
+                  <div class="col-sm-12">
+                    <h2>Gallery Movie</h2>                
+                   </div> 
+                  </div> 
+                  <div class="col-sm-12" style="align:center; width:100%;  padding-right:0%; margin-top:0%; margin-bottom:0%; margin-right:0%; ">
+                  <?php foreach ($gallery as $g){?>
+                    <?php $image = $g->SAMPEL_GALLERY;?>
+                       <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 1</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
                                 <a href class="col padder-v text-muted b-r b-light">
-                                  <div class="h4"><?php echo $g->JENIS_GALLERY?></div>
+                                  <div class="h5">Jenis : <b>Movie</div>
                                 </a>
-                                <a href class="col padder-v text-muted">
-                                  <div class="h5">free with login </div>
-                                </a>
-                                <a href class="col padder-v text-muted">
-                                  <div class="h5 ">Rp. <?php echo $g->HARGA_POINT_BONUS?>,-</div>
-                                </a>
-                                <a href class="col padder-v text-muted">
-                                  <div class="h5">Rp.<?php echo $g->HARGA_CASH?>,- </div>
-                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
                                 <a href class="col padder-v text-muted">
                                   <div class="h5">
-                                  <button class="btn btn-rounded btn-warning col-sm-12"><b>GET</b></button>
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
                                   <br />
                                   </div>
                                 </a>
-                            </div>
+                              </div>
                         </div> 
-                      </div> 
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; padding-left:0%;max-width:180px; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 2</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>Movie</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; padding-left:0%; max-width:180px; margin-top:4%; margin-bottom:1%;">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 3</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>Movie</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
 
                     <?php } ?>
-                 
-                  <div class="col-sm-12">
-                <hr>
-                  
-                        
-                  </div>
-                <hr>
                 </div>
-              <hr>
-                  </div><!--/panel-body-->
-                </div><!--/panel-->
-                <!--/end right column-->
-        </div> 
+                    <br />
+                    <a style="align:right;">More items >></a>  
+              </div><!--/panel-body-->
+            </div><!--/panel-->
 
-        <!--mid column-->
-          <?php $this->renderpartial('../layouts/side-social-feed');  ?>
+            <div class="panel" style="width:100%; border:1px solid #27c24c; border-radius:3px 3px 3px 3px;" >  
+                <div class="panel-body"> 
+                <div class="row">
+                <div class="col-sm-12">
+                    <h2>Gallery Picture</h2>                 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-12" style="align:center; width:100%;  padding-right:0%; margin-top:0%; margin-bottom:0%; margin-right:0%; ">
+                  <?php foreach ($gallery as $g){?>
+                    <?php $image = $g->SAMPEL_GALLERY;?>
+                       <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 1</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>PICTURE</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                 <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 2</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>PICTURE</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 3</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>PICTURE</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                    <?php } ?>
+                </div>
+                  <br />
+                    <a style="align:right;">More items >></a> 
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+
+            <div class="panel" style="width:100%; border:1px solid #f05050; border-radius:3px 3px 3px 3px;" >  
+                <div class="panel-body">
+                <div class="row">  
+                <div class="col-sm-12">
+                    <h2>Gallery Audio</h2>
+                   </div> 
+                  </div> 
+                  <div class="col-sm-12" style="align:center; width:100%;  padding-right:0%; margin-top:0%; margin-bottom:0%; margin-right:0%; ">
+                  <?php foreach ($gallery as $g){?>
+                    <?php $image = $g->SAMPEL_GALLERY;?>
+                       <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #f05050; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 1</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #f05050; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>AUDIO</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-danger col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                   <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #f05050; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 2</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #f05050; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>AUDIO</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-danger col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #f05050; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 3</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #f05050; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>AUDIO</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-danger col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                    <?php } ?>
+                </div>
+                 <br />
+                    <a style="align:right;">More items >></a> 
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+
+
+
+
+ <div class="panel" style="width:100%; border:1px solid #7266ba; border-radius:3px 3px 3px 3px;" >  
+                <div class="panel-body"> 
+                  <div class="row">
+                  <div class="col-sm-12">
+                    <h2>Gallery Event</h2>                
+                   </div> 
+                  </div> 
+                  <div class="col-sm-12" style="align:center; width:100%;  padding-right:0%; margin-top:0%; margin-bottom:0%; margin-right:0%; ">
+                  <?php foreach ($gallery as $g){?>
+                    <?php $image = $g->SAMPEL_GALLERY;?>
+                       <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 1</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>EVENT</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; padding-left:0%;max-width:180px; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 2</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>EVENT</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; padding-left:0%; max-width:180px; margin-top:4%; margin-bottom:1%;">                  
+                          <div class="panel-body" style="border:1px solid #7266ba; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 3</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #7266ba; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>EVENT</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-primary col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                    <?php } ?>
+                </div>
+                    <br />
+                    <a style="align:right;">More items >></a>  
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+
+<div class="panel" style="width:100%; border:1px solid #27c24c; border-radius:3px 3px 3px 3px;" >  
+                <div class="panel-body"> 
+                <div class="row">
+                <div class="col-sm-12">
+                    <h2>Gallery CD/DVD</h2>                 
+                   </div> 
+                  </div> 
+                  <div class="col-sm-12" style="align:center; width:100%;  padding-right:0%; margin-top:0%; margin-bottom:0%; margin-right:0%; ">
+                  <?php foreach ($gallery as $g){?>
+                    <?php $image = $g->SAMPEL_GALLERY;?>
+                       <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 1</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>CD/DVD</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                 <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 2</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>CD/DVD</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+
+                  <div class="col-sm-4 text-center" style="margin-left:0%; max-width:180px; padding-left:0%; margin-top:4%; margin-bottom:1%; ">                  
+                          <div class="panel-body" style="border:1px solid #27c24c; background-color:#f6f8f8; border-radius:6px 6px 6px 6px; ">
+                            
+                              <!-- <div class="col text-muted"> -->
+                                  <div class="h4" style="margin-top:0px; padding-top:0px;">barang 3</center></div> 
+                                <!-- </div>    -->    
+                                <img class="img-circle" src='<?php echo Yii::app()->request->baseUrl; ?>/images/berita/<?php echo $image; ?>' style="border:1px solid #27c24c; width:100%; border-radius:3px 3px 3px 3px; margin-bottom:5%;" >             
+                             
+                                <a href class="col padder-v text-muted b-r b-light">
+                                  <div class="h5">Jenis : <b>CD/DVD</div>
+                                </a>
+                                <a href class="padder-v text-muted">
+                                  <div class="h6 bg-warning"><i><b>get this item free with login</b></i> </div>    
+                                  
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      PoinBonus<br><b><?php echo $g->HARGA_POINT_BONUS?> coin
+                                    </div>
+                                      <div class="col-sm-1 h6" style="margin-left:3px; padding-left:0px; margin-right:1px; padding-right:0px"><b>or</div>
+                                    <div class="col-sm-5 h6" style="margin-left:0px; padding-left:0px; margin-right:0px; padding-right:0px;">
+                                      Cash<br><b>Rp.<?php echo $g->HARGA_CASH?>
+                                    </div>
+                                
+                                <a href class="col padder-v text-muted">
+                                  <div class="h5">
+                                  <button class="btn btn-rounded btn-success col-sm-12"><b>Get this item</b></button>
+                                  <br />
+                                  </div>
+                                </a>
+                              </div>
+                        </div> 
+
+                    <?php } ?>
+                </div>
+                  <br />
+                    <a style="align:right;">More items >></a> 
+              </div><!--/panel-body-->
+            </div><!--/panel-->
+
+          </div>         
+        </div>
+
+        <!--right column-->
+        <div class="col-md-3">
+          <?php $this->renderpartial('../layouts/side-social-feed');  ?>          
+        </div>
     <!-- </div> -->
 <!-- </div> -->
