@@ -3,12 +3,11 @@
 /* @var $dataProvider CActiveDataProvider */
 ?>
 <!-- Begin Body -->
-<div style="min-width:500px;">
-	<!-- <div class="row"> -->
-	<!-- left side column -->
-	<!--mid column-->
-	<!-- right content column-->
-	<div class="col-md-9" >
+<div class="col-md-2" >
+	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
+</div>
+
+	<div class="col-md-7" >
 		<div class="panel" style="min-width=500px;">
 			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">GALLERY PRIBADI</div>   
 			<div class="panel-body">
@@ -55,8 +54,7 @@
 					</div> 
 				</div>
 
-				<?php $this->renderpartial('../layouts/side-social-feed');  ?>
-				<?php $this->renderpartial('../layouts/side-komunitas');  ?>
-			</div>
-			<!-- </div> -->
-			<!-- </div> -->
+
+<div class="col-md-3">
+					<?php $this->renderpartial('../layouts/side-social-feed');  ?>          
+				</div>

@@ -14,15 +14,27 @@ class ProfileController extends Controller
 		$gallery = GalleryPribadi::model()->findAll($criteria);
 
 		$gallery_barang = GalleryBarang::model()->get_data_barang($id);
+		$user = Users::model()->findByPk($id);
 		// $criteria2 = new CDbCriteria();
 		// $criteria->condition = 'ID_USERS = '.$id;
 		// $criteria->order = 'ID_GALLERY_BARANG DESC';
 		// $gallery = GalleryBarang::model()->findAll($criteria);
-
+		if(isset($_POST['Users']))
+        {
+            $rnd = rand(0,9999);  // generate random number between 0-9999
+            $user->attributes=$_POST['Users'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($user,'FOTO');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            $user->FOTO = $fileName;
+ 			$user->save();
+ 			$uploadedFile->saveAs(Yii::app()->basePath.'/../images/profile/'.$fileName);
+ 			$this->redirect(Yii::app()->user->returnUrl.'profile');
+        }
 		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
 
 		// print_r($profile); die();
-		$this->render('profile',array('data'=>$profile,'gallery'=>$gallery,'koleksi'=>$gallery_barang));
+		$this->render('profile',array('model'=>$user,'data'=>$profile,'gallery'=>$gallery,'koleksi'=>$gallery_barang));
 	}
 	public function actionData()
 	{

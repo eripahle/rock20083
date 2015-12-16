@@ -6,6 +6,14 @@ class ProdukController extends Controller
 	{
 		$this->render('index');
 	}
+	public function actionBuyFree($id){
+
+		$cek = $this->setDataBuy('-',$id,1,'FREE');
+		if($cek){
+			$this->redirect(array('./profile'));
+		}
+
+	}
 	public function actionBuybypoint($id)
 	{
 		$vad = '-';
@@ -36,7 +44,7 @@ class ProdukController extends Controller
 		$profile = TransaksiRegistrasi::model()->get_data_profile($idUsr);
 		$user=Users::model()->findByPk($idUsr);
 		$model=GalleryBarang::model()->findByPk($id);
-		if($type != 'CASH' && $user->POINT < $model->HARGA_POINT){
+		if($type == 'POINT' && $user->POINT < $model->HARGA_POINT){
 			return false;
 		}else{			
 			$model_produk->ID_USERS = $idUsr;
@@ -65,8 +73,7 @@ class ProdukController extends Controller
 					 NAMA BARANG : <b>'.$model->NAMA_GALLERY.'</b><br> Silahkan Transfer Biaya Pembelian Sebesar	: <b>'.$model->HARGA_CASH.'</b> Ke Rekening Berikut<br> 
 					<br> Virtual ID anda : <b>'.$model_produk->VAD.'</b> <br> Terimakasih... ');
 				$mail->send();
-
-			}else{
+			}else if($type=='POINT'){
 				$user->POINT = $user->POINT - $model->HARGA_POINT;
 				$user->save();
 			}

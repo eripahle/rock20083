@@ -14,15 +14,14 @@
 	
 	<!-- right content column-->
 
-	<?php  foreach ($data as $data) {
-		$name = CHtml::encode($data['NAMA_LENGKAP']);
-		$badges = 999;
-		$points =CHtml::encode($data['POINT']);
-		$imageurl = "/media/b20.jpg";
-		$kota =  CHtml::encode($data['KOTA']);
+	<?php
+	$name = CHtml::encode($data['NAMA_LENGKAP']);
+	$badges = 9;
+	$points =CHtml::encode($data['POINT']);
+	$imageurl = './images/profile/'.$data['FOTO'];
+	$kota =  CHtml::encode($data['KOTA']);
 		$provinsi = CHtml::encode($data['PROVINSI']);
-		$no_sakti = CHtml::encode($data['NO_SAKTI']);;
-
+		$no_sakti = CHtml::encode($data['NO_SAKTI']);
 	?>    					
 <div class="col-md-12">
 	<div class="col-md-6" >
@@ -144,7 +143,6 @@
 				</div>
 			</div>
 		</div>
-		<?php } ?> 
 	</div>
 </div>
 
@@ -161,5 +159,6 @@
 </div>
 
 </div>
+
 
 

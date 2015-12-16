@@ -40,7 +40,8 @@ if(empty($id)){
 				array(
 					'label'=>'Home', 
 					'url'=>array('/'),					
-					'visible'=>!Yii::app()->user->isGuest),
+					// 'visible'=>Yii::app()->user->isGuest),
+					),
 				array(
 					'label'=>'Registrasi', 
 					'url'=>array('/registrasi'),
