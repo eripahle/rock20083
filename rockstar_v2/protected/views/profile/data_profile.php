@@ -17,7 +17,7 @@
 	$name = CHtml::encode($data['NAMA_LENGKAP']);
 	$badges = 9;
 	$points =CHtml::encode($data['POINT']);
-	$imageurl = "/media/b20.jpg";
+	$imageurl = './images/profile/'.$data['FOTO'];
 	$kota =  CHtml::encode($data['KOTA']);
 		$provinsi = CHtml::encode($data['PROVINSI']);
 		$no_sakti = CHtml::encode($data['NO_SAKTI']);;

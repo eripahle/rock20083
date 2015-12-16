@@ -72,6 +72,28 @@
 						</td>
 					</tr>
 				</table>
+					<div class="form">
+					<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'foto-profile-form',
+						'enableAjaxValidation'=>false,
+						'htmlOptions' => array(
+							'enctype' => 'multipart/form-data',
+							),
+
+							)); ?>
+
+							<div class="row">
+								<?php echo $form->labelEx($model,'Ubah Foto Profile'); ?>
+								<?php echo CHtml::activeFileField($model, 'FOTO'); ?> 
+								<?php echo $form->error($model,'FOTO'); ?>
+							</div>
+							<div class="row buttons">
+								<?php echo CHtml::submitButton($model->isNewRecord ? 'Upload' : 'Save',array('class'=>'btn btn-danger')); ?>
+							</div>
+
+							<?php $this->endWidget(); ?>
+
+						</div><!-- form -->
 			</div>
 		</div>	
 		

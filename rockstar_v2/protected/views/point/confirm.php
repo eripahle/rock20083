@@ -13,12 +13,9 @@
 </header> -->
 
 <!-- Begin Body -->
-<div style="min-width:500px;">
-	<!-- <div class="row"> -->
-	<!-- left side column -->
-	<!--mid column-->
+<div class="col-md-2" >
 	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
-	<!-- right content column-->
+</div>
 	<div class="col-md-7">
 		<div class="panel" style="min-width=500px;">
 			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">CONFIRM TOPUP</div>   
@@ -41,8 +38,7 @@
 			<Br>
 			</div> 
 		</div>
-
-		<?php $this->renderpartial('../layouts/side-social-feed');  ?>
-	</div>
-	<!-- </div> -->
-	<!-- </div> -->
+		
+<div class="col-md-3">
+					<?php $this->renderpartial('../layouts/side-social-feed');  ?>          
+				</div>
