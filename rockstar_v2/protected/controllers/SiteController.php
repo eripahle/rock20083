@@ -119,7 +119,7 @@ class SiteController extends Controller
 					$idUsr = Yii::app()->user->getId();
 				$criteria = new CDbCriteria();
 				$profile = TransaksiRegistrasi::model()->get_data_profile($idUsr);
-				if( $profile[0]['STATUS_FIRST_LOGIN']==0){
+				if( $profile['STATUS_FIRST_LOGIN']==0){
 					$this->redirect(Yii::app()->user->returnUrl.'profile/changePass');
 				}else{
 					$this->redirect(Yii::app()->user->returnUrl.'timeline');

@@ -16,7 +16,7 @@
 )); ?>
 	<div class="row">
 		<?php echo $form->label($model,'Status'); ?>
-		<?php echo $form->textArea($model,'KONTEN',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'KONTEN',array('rows'=>6, 'cols'=>50,'class'=>'contoh')); ?>
 	</div>
 
 	<div class="row buttons">

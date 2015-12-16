@@ -50,10 +50,13 @@
 								</div>
 
 								<div class="row">
-									<?php echo $form->labelEx($model,'JENIS_GALLERY'); ?>
-									<?php echo $form->textField($model,'JENIS_GALLERY',array('size'=>50,'maxlength'=>50)); ?>
-									<?php echo $form->error($model,'JENIS_GALLERY'); ?>
+									<?php echo $form->label($model,'JENIS_GALLERY');
+									$jenisGallery = array('Movie'=>'Movie','Picture'=>'Picture','Audio'=>'Audio','Event'=>'Event','CD/DVD'=>'CD/DVD');
+									echo $form->dropDownList($model, 'JENIS_GALLERY', $jenisGallery, array('prompt' => '-- Pilih JENIS GALLERY --'));
+									?>
+										
 								</div>
+
 								<div class="row">
 								<?php echo $form->labelEx($model,'Upload Gambar Sampel'); ?>
 									<?php echo CHtml::activeFileField($model, 'SAMPEL_GALLERY',array('rows'=>6, 'cols'=>50)); ?> 

@@ -25,11 +25,13 @@
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-offset-1 col-sm-10">
-				<?php  foreach(Yii::app()->user->getFlashes() as $key => $message) { ?>
-						<?php echo $key ?> Anda :<b><?php echo $message?></b><br>
-						<?php } ?>
+					<?php echo 'Virtual Account Anda  <b>'.Yii::app()->user->getFlash('Virtual Account'); ?></b>
+				
 						<br>
-						<font color="red"> * Silahkan Transfer Biaya ke Virtual Account Diatas</font>
+						<font color="red"> * Silahkan Transfer Biaya ke Virtual Account Diatas</font><br>
+						<font color="red">   Nilai Point adalah biaya / 5000 </font><br>
+						<font color="red"> * Silahkan Cek Email Anda </font><b>
+					<?php echo Yii::app()->user->getFlash('Email'); ?></b><br>
 						<a href="<?php echo Yii::app()->request->baseUrl; ?>/point/topup" class="btn btn-success">OK</a>
 
 					</div>

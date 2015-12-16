@@ -85,7 +85,7 @@ class ProfileController extends Controller
 		}
 		$criteria = new CDbCriteria();
 		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
-		$model=TransaksiRegistrasi::model()->findByPk($profile[0]['ID_REGISTRASI']);
+		$model=TransaksiRegistrasi::model()->findByPk($profile['ID_REGISTRASI']);
 		if(isset($_POST['TransaksiRegistrasi']))
 		{
 			$model->attributes=$_POST['TransaksiRegistrasi'];

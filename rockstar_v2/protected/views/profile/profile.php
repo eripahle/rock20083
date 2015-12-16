@@ -13,8 +13,7 @@
 	<!--mid column-->
 	
 	<!-- right content column-->
-
-	<?php  foreach ($data as $data) {
+	<?php
 	$name = CHtml::encode($data['NAMA_LENGKAP']);
 	$badges = 9;
 	$points =CHtml::encode($data['POINT']);
@@ -136,7 +135,6 @@
 			<!--/end right column-->
 			<Br>
 			</div>
-			<?php } ?> 
 		</div>
 
 		<?php $this->renderpartial('../layouts/side-timeline-news');  ?>
