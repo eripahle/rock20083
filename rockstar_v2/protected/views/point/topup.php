@@ -19,37 +19,16 @@
 			<div class="panel-body">
 				<br>
 				<div class="row">
-					<div class="col-sm-offset-3 col-sm-5" style="border: 1px solid #ccc;">
+					<div class="col-sm-offset-3 col-sm-5">
 						<div class="form">
-							<?php $form=$this->beginWidget('CActiveForm', array(
-								'id'=>'topup-point-form',
-								'enableAjaxValidation'=>false,
-								'htmlOptions' => array(
-									'enctype' => 'multipart/form-data',
-									),
-
-									)); ?>
-
-									<?php echo $form->errorSummary($model); ?>
-
-									<div class="row">
-										Masukkan Point
-										<?php echo $form->textField($model,'POINT',array('maxlength'=>10)); ?> 
-									</div>
-									<div class="row">
-										Total Biaya Rp.
-										<?php echo $form->textField($model,'biaya',array('readonly'=>true,'style'=>'font-weight: bold;')); ?> 
-									</div>
-										
-
-
-									<div class="row buttons">
-										<?php echo CHtml::submitButton($model->isNewRecord ? 'OK' : 'Save'); ?>
-									</div>
-
-									<?php $this->endWidget(); ?>
-
-								</div><!-- form -->
+						<?php  
+										echo CHtml::link(CHtml::encode('Lakukan TopUp'), 
+											array('Point/ConfirmTopUp'),
+											array(
+												'submit'=>array('Point/ConfirmTopUp'),
+										'class' => 'btn btn-primary','confirm'=>'Apakah Kamu Yakin Melakukan TopUp Point?'
+										));?>
+										</div>
 							</div>
 						</div><!--/panel-body-->
 					</div><!--/panel-->

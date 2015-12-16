@@ -160,7 +160,8 @@ class TransaksiRegistrasi extends CActiveRecord
     // $sql = "SELECT * FROM STATUS";
     $data = Yii::app()->db
         ->createCommand($sql)
-        ->queryAll();
+        // ->queryAll();
+        ->queryRow();
     return $data;
         }
 

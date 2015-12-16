@@ -22,6 +22,7 @@
 		$kota =  CHtml::encode($data['KOTA']);
 		$provinsi = CHtml::encode($data['PROVINSI']);
 		$no_sakti = CHtml::encode($data['NO_SAKTI']);;
+
 	?>    					
 <div class="col-md-12">
 	<div class="col-md-6" >
