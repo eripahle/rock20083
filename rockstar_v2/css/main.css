@@ -51,8 +51,10 @@ body
 {
 	/*background:white url(bgi.gif) repeat-x left top;*/
 	color: #58666e;
-	background-color: #f6f8f8;
+	background-color: #fff;
 	border-bottom: 1px solid #dee5e7;
+	min-height: 40px;
+	border-width:3px; 
 }
 
 #mainmenu ul
@@ -68,10 +70,10 @@ body
 
 #mainmenu ul li a
 {
-	color:#58666e;
+	color:#363f44;
 	background-color:transparent;
-	font-size:12px;
-	font-weight:bold;
+	font-size:14px;
+	/*font-weight:bold;*/
 	text-decoration:none;
 	padding:5px 8px;
 }
