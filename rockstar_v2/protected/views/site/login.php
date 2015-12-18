@@ -7,16 +7,21 @@
     </div>
 </header> -->
 
-<div class="col-md-2" >
-	<?php $this->renderpartial('../layouts/side-komunitas');  ?>
-</div>
-<div class="col-md-7" >
-		<div class="panel" style="min-width=500px;">
-			<div class="panel-heading text-center" style="background-color:#111;color:#fff;">LOGIN</div>   
-			<div class="panel-body">
+<div style="margin-left:5%; margin-right:5%; margin-top:-2%;">
+  <?php $this->renderpartial('../layouts/navbar1');  ?>
+  <div class="clear"></div>  
+
+  <div style="width:100%; margin-left:0%; margin-top:40px;">
+	
+	<!-- right content column-->
+	<div class="col-md-12" >
+		<!-- <div class="panel" style="min-width=500px;"> -->
+		<br />
+			<div class="text-center h2">LOGIN</div>   
+			<!-- <div class="panel-body"> -->
 			<br>
-				<div class="row">
-					<div class="col-sm-offset-3 col-sm-5" style="border: 1px solid #ccc;">
+				<div class="m-b-lg">
+					<div class="col-sm-offset-4 col-sm-5" style="margin-left:30%;">
 						<div class="form">
 							<?php $form=$this->beginWidget('CActiveForm', array(
 								'id'=>'login-form',
@@ -26,14 +31,14 @@
 									),
 									)); ?>
 									<div class="row">
-										<?php echo $form->labelEx($model,'nomor_sakti'); ?>
-										<?php echo $form->textField($model,'nomor_sakti',array('style' => 'width: 220px; border-radius: 0px;','class'=>'form-control')); ?>
+										<!-- <?php echo $form->labelEx($model,'nomor_sakti'); ?> -->
+										<?php echo $form->textField($model,'nomor_sakti',array('placeholder' =>'Username' , 'style' => 'form-control no-border width:330px; height:48px; margin-bottom:-1%; padding-bottom:-1%; ','class'=>'form-control')); ?>
 										<?php echo $form->error($model,'nomor_sakti'); ?>
 									</div>
 
 									<div class="row">
-										<?php echo $form->labelEx($model,'password'); ?>
-										<?php echo $form->passwordField($model,'password',array('style' => 'width: 220px; border-radius: 0px;','class'=>'form-control')); ?>
+										<!-- <?php echo $form->labelEx($model,'password'); ?> -->
+										<?php echo $form->passwordField($model,'password',array('placeholder' =>'Password', 'style' => 'form-control no-border width:330px; height:48px; margin-top:-1%; padding-top:-1%;','class'=>'form-control')); ?>
 										<?php echo $form->error($model,'password'); ?>
 									</div>
 
@@ -44,7 +49,7 @@
 									</div>
 
 									<div class="row buttons">
-										<?php echo CHtml::submitButton('Login'); ?>
+										<?php echo CHtml::submitButton('Login',array('class' => 'btn btn-lg btn-primary btn-block')); ?>
 									</div>
 
 									<?php $this->endWidget(); ?>
@@ -55,9 +60,12 @@
 					<!--/end right column-->
 					<Br>
 				</div> 
-			</div>
+			<!-- </div>
+
+			
+		</div> -->
+		<!-- </div> -->
+		<!-- </div> -->
 
 
-<div class="col-md-3">
-					<?php $this->renderpartial('../layouts/side-social-feed');  ?>          
-				</div>
+

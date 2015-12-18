@@ -14,9 +14,9 @@
 
  ?>
             <div style="padding-bottom:50px;">
-                <div class="panel b-a" style="border:2px solid #edf1f2;">
-                  <div class="panel-body text-center m-b clearfix ">
-                      <div class="thumb-lg avatar m-t-n-xxl" style="margin-bottom:5%;">
+                <div class="panel" style="border:2px solid #edf1f2;">
+                  <div class="panel-body text-center  clearfix ">
+                      <div class="" style="margin-bottom:5%;">
                         <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/media/<?php echo $imageurl; ?>" alt="..." style="width:95%; margin-top:5%; border:2px solid #23b7e5;">
                        </div>                        
                         <div style="margin-bottom:10%">
@@ -32,7 +32,7 @@
                           <button class="btn btn-rounded btn-default" style="border:2px solid #23b7e5;"><b>Join</b></button>                                                    
                     </div> 
                         <div class="col-md-6 text-center" style="background-color:#16aad8; border-radius: 0 0 0 3px;">                        
-                          <a href class="col padder-v text-muted b-r b-light">
+                          <a href class="col text-muted">
                             <div class="h4">
                               <font color="white">
                                 <?php echo $post; ?>
@@ -44,7 +44,7 @@
                           </a>
                         </div>
                         <div class="col-md-6 text-center" style="background-color:#23b7e5; border-radius: 0 0 3px 0;">                        
-                          <a href class="col padder-v text-muted b-r b-light">
+                          <a href class="col text-muted ">
                             <div class="h4">
                               <font color="white">
                                 <?php echo $member; ?>
@@ -59,9 +59,9 @@
             </div>
 
             <div style="margin-bottom:10%">
-                <div class="panel b-a" style="border:2px solid #edf1f2;">
-                  <div class="panel-body text-center m-b clearfix ">
-                      <div class="thumb-lg avatar m-t-n-xxl" style="margin-bottom:5%;">
+                <div class="panel" style="border:2px solid #edf1f2;">
+                  <div class="panel-body text-center">
+                      <div class="" style="margin-bottom:5%;">
                         <img class="img-circle" src="<?php echo Yii::app()->request->baseUrl; ?>/media/<?php echo $imageurl1; ?>" alt="..." style="width:95%; margin-top:5%; border:2px solid #23b7e5;">
                        </div>                        
                         <div style="margin-bottom:10%">
@@ -77,7 +77,7 @@
                           <button class="btn btn-rounded btn-default" style="border:2px solid #23b7e5;"><b>Join</b></button>                                                    
                     </div> 
                         <div class="col-md-6 text-center" style="background-color:#16aad8; border-radius: 0 0 0 3px;">                        
-                          <a href class="col padder-v text-muted b-r b-light">
+                          <a href class="col text-muted">
                             <div class="h4">
                               <font color="white">
                                 <?php echo $post1; ?>
@@ -89,7 +89,7 @@
                           </a>
                         </div>
                         <div class="col-md-6 text-center" style="background-color:#23b7e5; border-radius: 0 0 3px 0;">                        
-                          <a href class="col padder-v text-muted b-r b-light">
+                          <a href class="col">
                             <div class="h4">
                               <font color="white">
                                 <?php echo $member1; ?>

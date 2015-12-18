@@ -7,7 +7,10 @@
 /* @var $dataProvider CActiveDataProvider */
 ?>
 <!-- Begin Body -->
-<div style="min-width:500px;">
+<div class="col-md-12" style="margin-top:-2%; padding-top:5px; margin-left:-3%; width:106%;">	
+	<?php $this->renderpartial('../layouts/navbar2');  ?>
+</div>
+<div style="min-width:500px; margin-top:40px;">
 	<!-- <div class="row"> -->
 	<!-- left side column -->
 	<!--mid column-->

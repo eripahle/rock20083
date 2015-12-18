@@ -24230,3 +24230,559 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
 ---
+2015/12/18 03:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 03:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/css/main.css
+---
+2015/12/18 03:43:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/css/main.css
+---
+2015/12/18 03:44:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/css/main.css
+---
+2015/12/18 03:44:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 03:46:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 03:46:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/css/main.css
+---
+2015/12/18 03:46:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+---
+2015/12/18 03:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bg.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('img/bg.jpg')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/img/bg.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/css/main.css
+---
+2015/12/18 04:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 04:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:09:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:22:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:23:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:30:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:34:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:35:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:35:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:35:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 04:36:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 04:40:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 05:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 05:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 05:22:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 06:12:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `komentar` (`ID_STATUS_USERS`, `ID_USERS`, `KOMENTAR`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\rock20083\rockstar_v2\protected\controllers\TimelineController.php (152)
+in C:\xampp\htdocs\rock20083\rockstar_v2\index.php (13)
+2015/12/18 06:12:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `komentar` (`ID_STATUS_USERS`, `ID_USERS`, `KOMENTAR`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\rock20083\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\rock20083\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\protected\controllers\TimelineController.php(152): CActiveRecord->save()
+#3 C:\xampp\htdocs\rock20083\yii\framework\web\actions\CInlineAction.php(49): TimelineController->actionIndex()
+#4 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\rock20083\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\rock20083\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('timeline')
+#14 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/rock20083/rockstar_v2/timeline
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/timeline
+---
+2015/12/18 06:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 06:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:31:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 07:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
+2015/12/18 07:48:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:49:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:53:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:58:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:59:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 07:59:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:01:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---

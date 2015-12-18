@@ -103,4 +103,5 @@
 
 <div class="col-md-3">
 					<?php $this->renderpartial('../layouts/side-social-feed');  ?>          
-				</div>
+</div>
+</Br>

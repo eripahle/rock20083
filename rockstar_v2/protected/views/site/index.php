@@ -5,7 +5,13 @@
 
 <!-- <div class="row"> -->
 <!-- left side column -->
-<div class="col-md-2" >
+<div style=" margin-top:-2%;">
+  <?php $this->renderpartial('../layouts/navbar1');  ?>
+  <div class="clear"></div>  
+
+<div style="width:100%; margin-left:0%; margin-top:40px;">
+
+<div class="col-md-2" style="padding-left:0px;" >
   <?php $this->renderpartial('../layouts/side-komunitas');  ?>
 </div>
 <!--mid column-->
@@ -16,7 +22,7 @@
     <div class="panel-body">                  
       <div class="row">
         <div class="col-sm-12">
-          <h2>Gallery Barang</h2>
+          <h2><center>Gallery Barang</center></h2><br />
           Lorem ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet ipsum sit dolor amet<br><br>
           <a class="">More</a><br /><br />
         </div> 
@@ -525,5 +531,7 @@
                           <div class="col-md-3">
                             <?php $this->renderpartial('../layouts/side-social-feed');  ?>          
                           </div>
+                          <!-- </div> -->                          
                           <!-- </div> -->
-                          <!-- </div> -->
+</div>
+</div>
