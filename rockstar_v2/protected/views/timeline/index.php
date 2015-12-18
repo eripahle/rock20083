@@ -54,7 +54,7 @@ $rating = "/media/rating.png";
 <div class="col-xs-12 col-md-7" >
 	<div class="streamline b-l b-info m-l-lg m-b padder-v" >
 		<div class="pull-left-xs thumb-sm avatar" style="margin-left:-25px; margin-top:40px; margin-bottom:40px; height:50px; width:50px;">
-			<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:2px solid #23b7e5; width:50px;">      
+			<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5; width:50px;">      
 		</div>
 		<div style="margin-bottom:40px;">
 			<div class="m-l-lg" style="padding-left:1%; padding:2%; margin-top:30px;">
@@ -75,7 +75,7 @@ $rating = "/media/rating.png";
 			<!-- begin status -->
 			<div>
 				<a class="pull-left thumb-sm avatar m-l-n-md">
-					<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:2px solid #23b7e5;">      
+					<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5;">      
 				</a>          
 				<div class="m-l-lg m-b-lg panel b-a lt">
 					<div class="panel-heading pos-rlt b-light">
@@ -104,7 +104,7 @@ $rating = "/media/rating.png";
 						<div class="m-l-lg">
 							<hr>
 							<a class="pull-left thumb-sm avatar">
-								<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:2px solid #23b7e5;">      
+								<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5;">      
 							</a>          
 							<div class="m-l-xxl panel b-a" style="border-top: 1px solid #edf1f2; margin-right:10px;">
 								<div class="panel-heading pos-rlt">

@@ -24786,3 +24786,28 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
 ---
+2015/12/18 08:21:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:22:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/18 08:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3010-angkot2.jpg".' in C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rock20083\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/3010-ang...')
+#1 C:\xampp\htdocs\rock20083\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rock20083\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
+HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
+---
