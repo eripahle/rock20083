@@ -110,7 +110,7 @@ $rating = "/media/rating.png";
 								<div class="panel-heading pos-rlt">
 									<span class="arrow left pull-up"></span>
 									<span class="text-muted m-l-sm pull-right">
-										10m ago
+										<?php echo $k['DATETIME_KOMENTAR']?>
 									</span>
 									<a href><?php echo $k['NAMA_LENGKAP']?></a><br>
 									<?php echo $k['KOMENTAR']?>                         

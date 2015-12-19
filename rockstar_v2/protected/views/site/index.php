@@ -124,7 +124,7 @@
             <?php }} ?>
           </div>
           <br />
-          <a style="align:right;">More items >></a>  
+        <a style="align:right;" href="<?php echo Yii::app()->request->baseUrl; ?>/produk/more/movie">More items >></a> 
         </div><!--/panel-body-->
       </div><!--/panel-->
 
@@ -222,7 +222,7 @@
             <?php }} ?>
                 </div>
                 <br />
-                <a style="align:right;">More items >></a> 
+        <a style="align:right;" href="<?php echo Yii::app()->request->baseUrl; ?>/produk/more/picture">More items >></a> 
               </div><!--/panel-body-->
             </div><!--/panel-->
 
@@ -321,7 +321,8 @@
             <?php }} ?>
                       </div>
                       <br />
-                      <a style="align:right;">More items >></a> 
+                      
+        <a style="align:right;" href="<?php echo Yii::app()->request->baseUrl; ?>/produk/more/audio">More items >></a> 
                     </div><!--/panel-body-->
                   </div><!--/panel-->
 
@@ -422,7 +423,8 @@
             <?php }} ?>
                             </div>
                             <br />
-                            <a style="align:right;">More items >></a>  
+                            
+        <a style="align:right;" href="<?php echo Yii::app()->request->baseUrl; ?>/produk/more/event">More items >></a> 
                           </div><!--/panel-body-->
                         </div><!--/panel-->
 
@@ -520,7 +522,8 @@
             <?php }} ?>
                                   </div>
                                   <br />
-                                  <a style="align:right;">More items >></a> 
+                               
+        <a style="align:right;" href="<?php echo Yii::app()->request->baseUrl; ?>/produk/more/cddvd">More items >></a> 
                                 </div><!--/panel-body-->
                               </div><!--/panel-->
 

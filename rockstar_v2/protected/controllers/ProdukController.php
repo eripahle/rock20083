@@ -6,6 +6,24 @@ class ProdukController extends Controller
 	{
 		$this->render('index');
 	}
+	public function actionMore($id){
+		if($id=='movie') $id='Movie';
+		else if ($id=='event') $id='Event';
+		else if ($id=='audio') $id='Audio';
+		else if ($id=='picture') $id='Picture';
+		else if ($id=='cddvd') $id='CD';
+		$criteria = new CDbCriteria();
+		if(isset($_POST['cari'])){
+			$criteria->condition = 'JENIS_GALLERY = "'.$id.'" AND NAMA_GALLERY LIKE "%'.$_POST['cari'].'%"';
+		}else{
+			$criteria->condition = 'JENIS_GALLERY = "'.$id.'"';
+		}
+		
+		$criteria->order = 'ID_GALLERY_BARANG DESC';
+		$gallery = GalleryBarang::model()->findAll($criteria);
+
+		$this->render('more_items',array('gallery'=>$gallery,));
+	}
 	public function actionBuyFree($id){
 
 		$cek = $this->setDataBuy('-',$id,1,'FREE');

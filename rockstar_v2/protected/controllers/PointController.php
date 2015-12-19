@@ -24,7 +24,6 @@ class PointController extends Controller
 		// }
 		$id = Yii::app()->user->getId();
 		$topup=TransaksiRequestTopupPoint::model()->get_data_topup($id);
-		$topup = (object)$topup;	
 		$this->render('topup',array('topup'=>$topup));
 	}
 	public function actionConfirmTopUp(){
@@ -34,7 +33,7 @@ class PointController extends Controller
 		$model->ID_USERS = $id;
 		$model->TANGGAL = date('Y-m-d');
 		$model->STATUS = 0;
-		$model->save();
+		$model->save();	
 
 		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
 		$profile = (object)$profile;
@@ -60,7 +59,7 @@ class PointController extends Controller
 			Silahkan Transfer Biaya ke Virtual Account Anda <b>'.$user->VAS.'</b><br>
 			Nilai Point adalah biaya / 5000 <br>
 			<br> Terimakasih');
-		$mail->send();	
+		// $mail->send();	
 		$this->render('confirm');
 		}else{
 			$this->redirect(array('point/topup'));
