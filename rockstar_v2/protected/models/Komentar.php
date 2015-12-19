@@ -99,6 +99,7 @@ class Komentar extends CActiveRecord
            $sql = "SELECT 
            users.ID_USERS,
            users.ID_REGISTRASI,
+           users.FOTO,
            transaksi_registrasi.NAMA_LENGKAP,
            komentar.KOMENTAR,
            komentar.DATETIME_KOMENTAR 

@@ -1,10 +1,10 @@
 <?php
 /* @var $this TimelineController */
 /* @var $dataProvider CActiveDataProvider */
-$name = "Jennifer Doe";
+$name = $profile->NAMA_LENGKAP;
 $badges = 999;
-$points = 120;
-$profile_image = "/media/b20.jpg";
+$points =$profile->POINT;
+$profile_image = "/images/profile/".$profile->FOTO;
 $rating = "/media/rating.png";
 ?>    			
 <!-- <div class="col-md-3" style="background-image: url('<?php echo Yii::app()->request->baseUrl; ?>/media/a1.png')">
@@ -56,18 +56,7 @@ $rating = "/media/rating.png";
 		<div class="pull-left-xs thumb-sm avatar" style="margin-left:-25px; margin-top:40px; margin-bottom:40px; height:50px; width:50px;">
 			<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5; width:50px;">      
 		</div>
-		<div style="margin-bottom:40px;">
-			<div class="m-l-lg" style="padding-left:1%; padding:2%; margin-top:30px;">
-				<form class="m-b-none">
-					<div class="input-group">
-						<input type="text" class="form-control input-lg" placeholder="Input your status here">
-						<span class="input-group-btn">
-							<button class="btn btn-info btn-lg" type="button">POST</button>
-						</span>
-					</div>
-				</form>
-			</div>
-		</div>
+		<?php $this->renderPartial('_form', array('model'=>$model)); ?>
 
 		<?php 
 		foreach ($status as $stat) {
@@ -75,9 +64,15 @@ $rating = "/media/rating.png";
 			<!-- begin status -->
 			<div>
 				<a class="pull-left thumb-sm avatar m-l-n-md">
-					<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5;">      
+					<?php if(!empty($stat['FOTO'])){ 
+						$photo = '/images/profile/'.$stat['FOTO'];
+					}else{
+						$photo = '/images/profile/No_image_available.jpg';
+					} ?>
+					<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$photo?>" style="border:1px solid #23b7e5;">      
 				</a>          
 				<div class="m-l-lg m-b-lg panel b-a lt">
+
 					<div class="panel-heading pos-rlt b-light">
 						<span class="arrow arrow-light left"></span>                    
 						<a href><h5><?=$stat['NAMA_LENGKAP'] ?></h5></a>
@@ -100,11 +95,16 @@ $rating = "/media/rating.png";
 					<?php
 					$i=0;
 					foreach ($komen as $k) {
-						?>
+						if(!empty($k['FOTO'])){ 
+							$photoKomen = '/images/profile/'.$k['FOTO'];
+						}else{
+							$photoKomen = '/images/profile/No_image_available.jpg';
+						} ?>
+
 						<div class="m-l-lg">
 							<hr>
 							<a class="pull-left thumb-sm avatar">
-								<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$profile_image; ?>" style="border:1px solid #23b7e5;">      
+								<img class="img-circle" src="<?php echo Yii::app()->request->baseUrl.$photoKomen; ?>" style="border:1px solid #23b7e5;">      
 							</a>          
 							<div class="m-l-xxl panel b-a" style="border-top: 1px solid #edf1f2; margin-right:10px;">
 								<div class="panel-heading pos-rlt">
@@ -121,10 +121,15 @@ $rating = "/media/rating.png";
 						<!-- / .comment-reply -->
 						<!-- comment -->
 						<div class="panel panel-default m-t-md m-b-n-sm pos-rlt" style="height:45px;">
-							<form class="col-md-10 col-xs-10" style="margin-top:7px;">
-								<input type="text" class="form-control no-border" style="height:30px; margin-left:5px; " placeholder="Add comment"></input>
+							<form class="col-md-11 col-xs-11" style="margin-top:7px;" method="POST">
+								<div class="input-group">
+								<input type="text" name="komen" class="form-control no-border" style="height:30px; " placeholder="Add comment"></input>
+								<input type="hidden" name="idstat" value="<?php echo $stat['ID_STATUS_USERS'] ?>">
+									<span class="input-group-btn">
+										<button type="submit" class="col-md-12 col-xs-12 btn btn-default btn-sm"><b>Comment</b></button>
+									</span>
+								</div>
 							</form>
-							<button class="col-md-2 col-xs-2 btn btn-default btn-sm" style="margin-top:7px; margin-left:-15px;"><b>Comment</b></button>
 							<div class="panel-footer bg-light lter">
 								<br>
 							</div>	 
@@ -138,7 +143,7 @@ $rating = "/media/rating.png";
 			</div>
 
 		</div>			
-		
+
 		<div class="col-xs-12 col-md-3" style="margin-top:40px;">
 			<?php $this->renderpartial('../layouts/side-timeline-news');  ?>
 		</div>

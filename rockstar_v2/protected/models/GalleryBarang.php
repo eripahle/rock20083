@@ -118,7 +118,7 @@ class GalleryBarang extends CActiveRecord
            $sql = "SELECT * 
             FROM gallery_barang,transaksi_request_pembelian
             WHERE transaksi_request_pembelian.ID_USERS = $id 
-            AND transaksi_request_pembelian.STATUS = 1
+            AND transaksi_request_pembelian.STATUS = 2
             AND gallery_barang.ID_GALLERY_BARANG = transaksi_request_pembelian.ID_GALLERY_BARANG";
     // $sql = "SELECT * FROM STATUS";
     $data = Yii::app()->db

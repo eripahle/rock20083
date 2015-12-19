@@ -22,12 +22,20 @@ class PointController extends Controller
 		// 		// $data = array('vad'=>$model->VAD,'pwd'=>$model_user->PASSWORD,'email'=>$model->EMAIL);
 		// 	$this->redirect(array('confirmtopup'));
 		// }
-		$this->render('topup');
+		$id = Yii::app()->user->getId();
+		$topup=TransaksiRequestTopupPoint::model()->get_data_topup($id);
+		$topup = (object)$topup;	
+		$this->render('topup',array('topup'=>$topup));
 	}
 	public function actionConfirmTopUp(){
 		$id = Yii::app()->user->getId();
 		$model=new TransaksiRequestTopupPoint;
 		$user=Users::model()->findByPk($id);
+		$model->ID_USERS = $id;
+		$model->TANGGAL = date('Y-m-d');
+		$model->STATUS = 0;
+		$model->save();
+
 		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
 		$profile = (object)$profile;
 		Yii::app()->user->setFlash('Virtual Account',$user->VAS);

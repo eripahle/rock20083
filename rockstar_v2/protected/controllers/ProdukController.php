@@ -42,6 +42,7 @@ class ProdukController extends Controller
 		$model_produk=new TransaksiRequestPembelian;
 		$idUsr = Yii::app()->user->getId();
 		$profile = TransaksiRegistrasi::model()->get_data_profile($idUsr);
+		$profile = (object)$profile;
 		$user=Users::model()->findByPk($idUsr);
 		$model=GalleryBarang::model()->findByPk($id);
 		if($type == 'POINT' && $user->POINT < $model->HARGA_POINT){
@@ -66,9 +67,9 @@ class ProdukController extends Controller
 				$mail->Password = "sendmailer";
 				$mail->setFrom('arf.sendmailer@gmail.com', 'Admin Soniq');
 				// $mail->addReplyTo('replyto@example.com', 'First Last');
-				$mail->addAddress($profile[0]['EMAIL'],$profile[0]['NAMA_LENGKAP']);
+				$mail->addAddress($profile->EMAIL,$profile->NAMA_LENGKAP);
 				$mail->Subject = 'Konfirmasi Pembelian Produk Soniq';
-				$mail->MsgHTML('<h1> Hello, '.$profile[0]['NAMA_LENGKAP'].'</h1><br> 
+				$mail->MsgHTML('<h1> Hello, '.$profile->NAMA_LENGKAP.'</h1><br> 
 					Anda Request Barang denganKODE BARANG : <b>'.$model->KODE_GALLERY.' </b> dan 
 					 NAMA BARANG : <b>'.$model->NAMA_GALLERY.'</b><br> Silahkan Transfer Biaya Pembelian Sebesar	: <b>'.$model->HARGA_CASH.'</b> Ke Rekening Berikut<br> 
 					<br> Virtual ID anda : <b>'.$model_produk->VAD.'</b> <br> Terimakasih... ');

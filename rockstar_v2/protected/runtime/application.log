@@ -24811,3 +24811,157 @@ Stack trace:
 REQUEST_URI=/rock20083/rockstar_v2/images/3010-angkot2.jpg
 HTTP_REFERER=http://localhost/rock20083/rockstar_v2/profile
 ---
+2015/12/19 01:37:04 [error] [php] Undefined property: stdClass::$NAMA_LENGKAP (C:\xampp\htdocs\_rockstar\rockstar_v2\protected\views\timeline\index.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(869): TimelineController->renderFile()
+#1 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(782): TimelineController->renderPartial()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php(157): TimelineController->render()
+#3 C:\xampp\htdocs\_rockstar\yii\framework\web\actions\CInlineAction.php(49): TimelineController->actionIndex()
+#4 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(133): TimelineController->runAction()
+#6 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CInlineFilter.php(58): TimelineController->filterAccessControl()
+#9 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(265): TimelineController->runActionWithFilters()
+#12 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(282): TimelineController->run()
+#13 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CWebApplication->run()
+REQUEST_URI=/_rockstar/rockstar_v2/timeline
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\views\timeline\index.php (11)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php (157)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/19 01:40:34 [error] [php] Undefined variable: idUsr (C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(133): TimelineController->runAction()
+#1 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CInlineFilter.php(58): TimelineController->filterAccessControl()
+#4 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(265): TimelineController->runActionWithFilters()
+#7 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(282): TimelineController->run()
+#8 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CWebApplication->run()
+REQUEST_URI=/_rockstar/rockstar_v2/timeline
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php (129)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/19 01:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/19 01:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/19 01:44:18 [warning] [application] Failed to set unsafe attribute "FOTO" of "Users".
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\ProfileController.php (25)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/19 01:52:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'transaksi_registrasi.FOTO' in 'field list'. The SQL statement executed was: SELECT 
+           status_users.ID_STATUS_USERS,
+           users.ID_USERS,
+           users.ID_REGISTRASI,
+           transaksi_registrasi.NAMA_LENGKAP,
+           transaksi_registrasi.FOTO,
+           status_users.KONTEN,
+           status_users.DATETIME_STATUS 
+            FROM users,transaksi_registrasi,status_users 
+            WHERE status_users.ID_USERS = users.ID_USERS AND 
+            users.ID_REGISTRASI = transaksi_registrasi.ID_REGISTRASI ORDER BY status_users.ID_STATUS_USERS DESC.
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\models\StatusUsers.php (119)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php (139)
+in C:\xampp\htdocs\_rockstar\rockstar_v2\index.php (13)
+2015/12/19 01:52:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'transaksi_registrasi.FOTO' in 'field list'. The SQL statement executed was: SELECT 
+           status_users.ID_STATUS_USERS,
+           users.ID_USERS,
+           users.ID_REGISTRASI,
+           transaksi_registrasi.NAMA_LENGKAP,
+           transaksi_registrasi.FOTO,
+           status_users.KONTEN,
+           status_users.DATETIME_STATUS 
+            FROM users,transaksi_registrasi,status_users 
+            WHERE status_users.ID_USERS = users.ID_USERS AND 
+            users.ID_REGISTRASI = transaksi_registrasi.ID_REGISTRASI ORDER BY status_users.ID_STATUS_USERS DESC' in C:\xampp\htdocs\_rockstar\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\_rockstar\rockstar_v2\protected\models\StatusUsers.php(119): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\protected\controllers\TimelineController.php(139): StatusUsers->get_all_data()
+#3 C:\xampp\htdocs\_rockstar\yii\framework\web\actions\CInlineAction.php(49): TimelineController->actionIndex()
+#4 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\_rockstar\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\_rockstar\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('timeline')
+#14 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/timeline
+HTTP_REFERER=http://localhost/_rockstar/rockstar_v2/timeline
+---
+2015/12/19 01:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "image/profile8417-photo.jpg".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('image/profile84...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/image/profile8417-photo.jpg
+HTTP_REFERER=http://localhost/_rockstar/rockstar_v2/timeline
+---
+2015/12/19 01:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "image/profile/No_image_available.jpg".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('image/profile/N...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/image/profile/No_image_available.jpg
+HTTP_REFERER=http://localhost/_rockstar/rockstar_v2/timeline
+---
+2015/12/19 01:58:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/profile8417-photo.jpg".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/profile8...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/images/profile8417-photo.jpg
+HTTP_REFERER=http://localhost/_rockstar/rockstar_v2/timeline
+---
+2015/12/19 02:02:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/19 02:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---
+2015/12/19 02:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/bootstrap.css.map".' in C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\_rockstar\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/bootstrap.c...')
+#1 C:\xampp\htdocs\_rockstar\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\_rockstar\rockstar_v2\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/_rockstar/rockstar_v2/css/bootstrap.css.map
+---

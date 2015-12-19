@@ -108,6 +108,7 @@ class StatusUsers extends CActiveRecord
            users.ID_USERS,
            users.ID_REGISTRASI,
            transaksi_registrasi.NAMA_LENGKAP,
+           users.FOTO,
            status_users.KONTEN,
            status_users.DATETIME_STATUS 
             FROM users,transaksi_registrasi,status_users 

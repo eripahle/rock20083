@@ -126,6 +126,8 @@ class TimelineController extends Controller
 		if(empty($id)){
 			$this->redirect(Yii::app()->user->returnUrl.'site/login');
 		}
+		$profile = TransaksiRegistrasi::model()->get_data_profile($id);
+		$profile = (object)$profile;
 
 		$criteria = new CDbCriteria();
 		$model = new StatusUsers;
@@ -153,7 +155,7 @@ class TimelineController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl.'timeline');
 		}
 
-		$this->render('index',array('model'=>$model,'status'=>$status,
+		$this->render('index',array('model'=>$model,'status'=>$status,'profile'=>$profile,
 			));
 	}
 

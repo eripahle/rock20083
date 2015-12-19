@@ -90,7 +90,16 @@ class TransaksiRequestTopupPoint extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public function get_data_topup($id)
+        {            
+           $sql = "SELECT * FROM transaksi_request_topup_point WHERE ID_USERS = $id ORDER BY ID_TRANSAKSI_REQUEST_TOPUP_POINT DESC LIMIT 1";
+    // $sql = "SELECT * FROM STATUS";
+    $data = Yii::app()->db
+        ->createCommand($sql)
+        // ->queryAll();
+        ->queryRow();
+    return $data;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
