@@ -101,6 +101,8 @@ class StatusUsers extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	
 	public function get_all_data()
         {            
            $sql = "SELECT 
@@ -117,6 +119,7 @@ class StatusUsers extends CActiveRecord
     $data = Yii::app()->db
         ->createCommand($sql)
         ->queryAll();
+        // echo $data['DATETIME_STATUS'];
     return $data;
         }
 

@@ -3,8 +3,8 @@
 
 <!-- Begin Body -->
 
-<!-- <div class="row"> -->
 <!-- left side column -->
+<div class="container">
 <div style=" margin-top:-2%;">
   <?php $this->renderpartial('../layouts/navbar1');  ?>
   <div class="clear"></div>  
@@ -536,5 +536,6 @@
                           </div>
                           <!-- </div> -->                          
                           <!-- </div> -->
+</div>
 </div>
 </div>

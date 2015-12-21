@@ -117,6 +117,7 @@ class TimelineController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
+	
 	/**
 	 * Lists all models.
 	 */
@@ -137,6 +138,8 @@ class TimelineController extends Controller
 		$criteria->order= 'ID_STATUS_USERS DESC';
 		// $status = Status::model()->findAll($criteria);
 		$status = $model->get_all_data();
+
+		// $model->DATETIME_STATUS = $this->time_ago($_POST['DATETIME_STATUS']);
 		if(isset($_POST['StatusUsers']))
 		{
 			// $model->attributes=$_POST['Status'];

@@ -15,8 +15,8 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-<div class="input-group">
-		<?php echo $form->textField($model,'KONTEN',array('class'=>'form-control input-lg','placeholder'=>'Input your status here...')); ?>
+<div class="input-group col-md-11">
+		<?php echo $form->textField($model,'KONTEN',array('class'=>'form-control input-lg','placeholder'=>'whats on your mind?')); ?>
 <span class="input-group-btn">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Post' : 'Save',array('class'=>'btn btn-info btn-lg')); ?>
 		</span>

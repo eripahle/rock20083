@@ -1,15 +1,80 @@
 <?php
-/* @var $this TransaksiRegistrasiController */
-/* @var $data TransaksiRegistrasi */
-?>
-<?php
 /* @var $this TimelineController */
 /* @var $dataProvider CActiveDataProvider */
-?>
+
+date_default_timezone_set('Asia/Jakarta');
+
+
+function time_ago($date) {
+	$granularity=2;
+	$retval = '';
+	$date = strtotime($date);
+	$difference = time() - $date;
+	$periods = array('decade' => 315360000,
+		'year' => 31536000,
+		'month' => 2628000,
+		'week' => 604800, 
+		'day' => 86400,
+		'hour' => 3600,
+		'minute' => 60,
+		'second' => 1);
+	
+	if ($difference < 60) { // less than 5 seconds ago, let's say "just now"
+	$retval = "posted just now";
+	return $retval;
+	} else {                            
+		foreach ($periods as $key => $value) {
+			if ($difference >= $value) {
+				$time = floor($difference/$value);
+				$difference %= $value;
+				$retval .= ($retval ? ' ' : '').$time.' ';
+				$retval .= (($time > 1) ? $key.'s' : $key);
+				$granularity--;
+			}
+			if ($granularity == '0') { break; }
+		}
+		return ' posted '.$retval.' ago';      
+	}
+}
+
+?>    			
+
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+    <script type="text/javascript">
+        $(function() {
+            var offset = $("#sidebar").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $("#sidebar").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $("#sidebar").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+
+  $("document").ready(function($){
+    var nav = $('#mainnav');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 125) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+});
+    </script>
 <!-- Begin Body -->
-<div class="col-md-12" style="margin-top:-2%; padding-top:5px; margin-left:-3%; width:106%;">	
+<div id="mainnav" style="margin-left:-3%; width:107%;">	
 	<?php $this->renderpartial('../layouts/navbar2');  ?>
 </div>
+
 <div style="min-width:500px; margin-top:40px;">
 	<!-- <div class="row"> -->
 	<!-- left side column -->
@@ -26,17 +91,17 @@
 		$provinsi = CHtml::encode($data['PROVINSI']);
 		$no_sakti = CHtml::encode($data['NO_SAKTI']);
 	?>    					
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top:20px;">
 	<div class="col-md-6" >
 
-		<div class="panel-heading text-center" style="background-color:#111;color:#fff;">PROFILE</div>   		
-		<div class="col-md-12" style="border:2px solid #ccc; margin-bottom:4%; background:white;">
+		<div class="panel">
+		<div class="panel-body" style="border:2px solid #ccc; margin-bottom:4%; background:white;">
 			
 			<div>
 				<table>
 					<tr>
-						<td rowspan="4" colspan="4">
-							<img src="<?php echo Yii::app()->request->baseUrl.$imageurl; ?>" style="width:90%; padding-top:20px; border:1px solid #ccc;">                      							
+						<td rowspan="4" colspan="4" style="padding-top:20px;">
+							<img src="<?php echo Yii::app()->request->baseUrl.$imageurl; ?>" style="width:200px; border:1px solid #ccc;">                      							
 						</td>	
 						<td colspan="4" rowpan="2">
 							<h3 style="color:black;"><b><a><?php echo "  ".$name; ?></a></b></h3>
@@ -97,6 +162,7 @@
 							<?php $this->endWidget(); ?>
 
 						</div><!-- form -->
+					</div>
 			</div>
 		</div>	
 		

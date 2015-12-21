@@ -38,7 +38,7 @@
 
 									<div class="row">
 										<!-- <?php echo $form->labelEx($model,'password'); ?> -->
-										<?php echo $form->passwordField($model,'password',array('placeholder' =>'Password', 'style' => 'form-control no-border width:330px; height:48px; margin-top:-1%; padding-top:-1%;','class'=>'form-control')); ?>
+										<?php echo $form->passwordField($model,'password',array('placeholder' =>'Password', 'style' => 'form-control no-border width:330px; height:48px; margin-top:1px; padding-top:1px;','class'=>'form-control')); ?>
 										<?php echo $form->error($model,'password'); ?>
 									</div>
 
